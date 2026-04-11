@@ -1,0 +1,105 @@
+# CLAUDE.md — Mahadurga Pipe Distributors Website
+
+Instructions and context for Claude Code when working in this repo.
+
+---
+
+## Project Overview
+
+**Client:** Mahadurga Pipe Distributors (MDP)
+**Domain:** mahadurga.com (GitHub Pages, custom domain via CNAME)
+**Stack:** Pure HTML/CSS/JS — single `index.html`, no build step, no frameworks
+**Hosting:** GitHub Pages → `main` branch, auto-deploys on push
+
+---
+
+## Repo Structure
+
+```
+index.html          — Entire website (styles, markup, scripts all inline)
+MDP-Final_Logo.png  — Company logo (used in nav and favicon)
+robots.txt          — Allows all crawlers, points to sitemap
+sitemap.xml         — Lists homepage + anchor sections for SEO
+CNAME               — mahadurga.com (GitHub Pages custom domain)
+CHANGELOG.md        — Human-readable version history
+CLAUDE.md           — This file
+.claude/            — Claude Code project settings
+```
+
+---
+
+## Key Page Sections (IDs)
+
+| Section | ID | Notes |
+|---|---|---|
+| Hero | `#home` | Est. 2008, tagline, scroll indicator |
+| Stats Bar | _(no id)_ | 500+ clients, 50+ products, 4.4★ Google Rating (clickable), GST |
+| Products | `#products` | 4 product cards with IS standard specs |
+| Industries | `#industries` | 6 industry cards |
+| Why Us | `#why` | 5 points + CTA |
+| Location / Contact | `#location` | Address, hours, phone, email, website, Google Maps embed |
+
+---
+
+## Important Content Placeholders
+
+These are still dummy values in `index.html` — replace when real info is available:
+
+- **Phone number**: `+91XXXXXXXXXX` in `<a href="tel:...">` (line ~936) and display text
+- **WhatsApp number**: `91XXXXXXXXXX` in all 3 WhatsApp `href` attributes
+
+---
+
+## Contact Details
+
+- **Public email displayed:** `mahadurgapipes@gmail.com`
+- **mailto href:** `mahadurgapipes+web@gmail.com?subject=Inquiry%20from%20mahadurga.com%20Website`
+  - The `+web` tag lets Gmail filter website-originated emails with a label
+
+---
+
+## SEO Files
+
+- `robots.txt` — `User-agent: * / Allow: / / Sitemap: https://mahadurga.com/sitemap.xml`
+- `sitemap.xml` — Lists `/`, `/#products`, `/#industries`, `/#why`, `/#location`
+
+> **IMPORTANT:** If a new named section with its own `id` is added to `index.html`,
+> also add a corresponding `<url>` entry to `sitemap.xml` and update the priority weights.
+> Forgetting this means new sections won't be submitted to search engines.
+
+---
+
+## Changelog
+
+### [2.1.0] — 2026-04-11 *(Claude Code session)*
+
+- **Email contact row** added to the "Visit Our Warehouse" location section, between Phone and Website rows. Uses `✉️` emoji icon, displays `mahadurgapipes@gmail.com`, mailto href routes to `mahadurgapipes+web@gmail.com` with pre-filled subject for Gmail label filtering.
+- **Google Rating stat made clickable** — wraps the 4.4★ stat block in an `<a class="stat">` linking to the Google Business Profile reviews page (`https://share.google/SkPvAURwc6F8KMJ31`), `target="_blank" rel="noopener"`. Added `a.stat` CSS reset so it renders identically to non-link stat blocks.
+- **`robots.txt` added** — allows all crawlers, points to sitemap at `https://mahadurga.com/sitemap.xml`.
+- **`sitemap.xml` added** — lists homepage and all 4 anchor sections with priority weights.
+
+---
+
+### [2.0.0] — 2026-03-27
+
+Full website overhaul. See `CHANGELOG.md` for the complete breakdown.
+
+**Summary:**
+- Removed "Site Under Construction" banner
+- Fixed Est. year inconsistency → unified to **Est. 2008**, stats show **15+ Years**
+- Added mobile hamburger menu, active nav highlighting, scroll-state nav opacity
+- Scroll-reveal animations (fade up/left/right) + stat counter animation via Intersection Observer
+- New **Industries We Supply** section (6 cards)
+- Product cards expanded with spec lists and IS standard references
+- WhatsApp FAB + back-to-top button + hero scroll indicator
+- Expanded footer (3 columns: brand, quick links, contact)
+- SEO meta tags, Open Graph tags, favicon
+
+---
+
+### [1.x] — Pre-2026 (initial commits)
+
+- `init` — initial repo setup
+- CNAME configured (multiple iterations) for `mahadurga.com`
+- Logo added (`MDP-Final_Logo.png`)
+- Minor tweaks and "Site Under Construction" placeholder period
