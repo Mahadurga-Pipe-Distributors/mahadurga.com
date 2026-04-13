@@ -348,6 +348,6 @@ document.getElementById('langToggle').addEventListener('click', e => {
   // Apply translations if non-default
   if (storedLang !== 'en') applyTranslations(storedLang);
 
-  // Ensure data-theme attr is set even when no stored value (default = dark)
-  if (!storedTheme) document.documentElement.setAttribute('data-theme', 'dark');
+  // Ensure data-theme attr is set (default = light)
+  if (!storedTheme) document.documentElement.setAttribute('data-theme', 'light');
 })();
