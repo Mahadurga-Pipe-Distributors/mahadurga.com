@@ -41,18 +41,11 @@ CLAUDE.md           — This file
 
 ---
 
-## Important Content Placeholders
-
-These are still dummy values in `index.html` — replace when real info is available:
-
-- **Phone number**: `+91XXXXXXXXXX` in `<a href="tel:...">` (line ~936) and display text
-- **WhatsApp number**: `91XXXXXXXXXX` in all 3 WhatsApp `href` attributes
-
----
-
 ## Contact Details
 
-- **Public email displayed:** `mahadurgapipes@gmail.com`
+- **Phone (landline):** `080-49734555` — `tel:08049734555`, schema telephone `+918049734555`
+- **WhatsApp:** `+91 93438 33940` — `wa.me/919343833940`
+- **Email displayed:** `mahadurgapipes+web@gmail.com`
 - **mailto href:** `mahadurgapipes+web@gmail.com?subject=Inquiry%20from%20mahadurga.com%20Website`
   - The `+web` tag lets Gmail filter website-originated emails with a label
 
