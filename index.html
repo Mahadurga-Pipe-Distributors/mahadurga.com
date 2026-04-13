@@ -12,6 +12,7 @@
   <title>Mahadurga Pipe Distributors | Wholesale Pipes & Fittings, Bengaluru</title>
   <link rel="icon" href="MDP-Final_Logo.png" type="image/png"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <script src="theme-init.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -704,6 +705,64 @@
       .stat { padding: 22px 18px; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 14px; }
     }
+
+    /* ============================================================
+       LIGHT MODE
+    ============================================================ */
+    [data-theme="light"] {
+      --bg:     #f4f6fb;
+      --bg2:    #eaedf7;
+      --bg3:    #dde1f2;
+      --text:   #0d1020;
+      --muted:  #6b7399;
+      --border: #c5cae5;
+    }
+    [data-theme="light"] body::before { opacity: 0.05; }
+    [data-theme="light"] nav { background: rgba(244,246,251,0.88); }
+    [data-theme="light"] nav.scrolled { background: rgba(244,246,251,0.97); }
+    [data-theme="light"] .mobile-menu { background: rgba(244,246,251,0.98); }
+    [data-theme="light"] .map-embed { filter: grayscale(15%); }
+
+    /* ============================================================
+       NAV CONTROLS (theme + language switchers)
+    ============================================================ */
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+
+    .nav-controls { display: flex; align-items: center; gap: 8px; }
+
+    .lang-toggle { display: flex; align-items: stretch; border: 1px solid var(--border); }
+    .lang-btn {
+      background: none; border: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.63rem; letter-spacing: 1.5px;
+      color: var(--muted); padding: 5px 9px;
+      transition: color 0.2s, background 0.2s; line-height: 1;
+    }
+    .lang-btn.active { color: var(--blue2); background: rgba(0,207,255,0.09); }
+    .lang-btn:hover:not(.active) { color: var(--text); }
+    .lang-sep {
+      color: var(--border); font-size: 0.8rem; align-self: center;
+      pointer-events: none; user-select: none; padding: 0 1px;
+    }
+
+    .theme-toggle {
+      background: none; border: 1px solid var(--border);
+      width: 30px; height: 30px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; color: var(--muted); flex-shrink: 0;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--blue2); color: var(--blue2); }
+
+    /* Dark (default): show ☀ to switch to light. Light: show ☽ to switch to dark. */
+    .theme-toggle .icon-moon { display: none; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+    @media (max-width: 900px) {
+      .nav-right { gap: 10px; }
+      .lang-btn { padding: 5px 6px; }
+    }
   </style>
 </head>
 <body>
@@ -719,24 +778,37 @@
         <span class="sub">Bengaluru · Est. 2008</span>
       </div>
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#products">Products</a></li>
-      <li><a href="#industries">Industries</a></li>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#location">Contact</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
+        <li><a href="#why" data-i18n="nav.why">Why Us</a></li>
+        <li><a href="#location" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <span class="icon-sun">☀</span>
+          <span class="icon-moon">☽</span>
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#products" class="mob-link">Products</a></li>
-      <li><a href="#industries" class="mob-link">Industries</a></li>
-      <li><a href="#why" class="mob-link">Why Us</a></li>
-      <li><a href="#location" class="mob-link">Contact</a></li>
+      <li><a href="#products" class="mob-link" data-i18n="nav.products">Products</a></li>
+      <li><a href="#industries" class="mob-link" data-i18n="nav.industries">Industries</a></li>
+      <li><a href="#why" class="mob-link" data-i18n="nav.why">Why Us</a></li>
+      <li><a href="#location" class="mob-link" data-i18n="nav.contact">Contact</a></li>
     </ul>
   </div>
 
@@ -749,13 +821,13 @@
     <div class="hero-glow2"></div>
 
     <div class="hero-content">
-      <div class="hero-tag">Est. 2008 · Peenya Industrial Area, Bengaluru</div>
-      <h1>MAHADURGA<span class="word-blue">PIPE DISTRIBUTORS</span></h1>
-      <div class="hero-sub">WHOLESALE · BENGALURU</div>
-      <p class="hero-desc">Your trusted source for Mild Steel Pipes, PVC & CPVC Pipes, and Pipe Fittings. Serving Bengaluru's construction and industrial sector with quality products and fast delivery since 2008.</p>
+      <div class="hero-tag" data-i18n="hero.tag">Est. 2008 · Peenya Industrial Area, Bengaluru</div>
+      <h1>MAHADURGA<span class="word-blue" data-i18n="hero.h1.sub">PIPE DISTRIBUTORS</span></h1>
+      <div class="hero-sub" data-i18n="hero.sub">WHOLESALE · BENGALURU</div>
+      <p class="hero-desc" data-i18n="hero.desc">Your trusted source for Mild Steel Pipes, PVC & CPVC Pipes, and Pipe Fittings. Serving Bengaluru's construction and industrial sector with quality products and fast delivery since 2008.</p>
       <div class="hero-actions">
-        <a href="#products" class="btn-primary">Explore Products</a>
-        <a href="#location" class="btn-outline">Visit Us</a>
+        <a href="#products" class="btn-primary" data-i18n="hero.cta1">Explore Products</a>
+        <a href="#location" class="btn-outline" data-i18n="hero.cta2">Visit Us</a>
       </div>
     </div>
 
@@ -772,7 +844,7 @@
 
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
-      <span>Scroll</span>
+      <span data-i18n="hero.scroll">Scroll</span>
     </div>
   </section>
 
@@ -782,21 +854,21 @@
   <div class="stats">
     <div class="stat">
       <div class="stat-num" data-count="15" data-suffix="+">15+</div>
-      <div class="stat-label">Years in Business</div>
+      <div class="stat-label" data-i18n="stat.years">Years in Business</div>
     </div>
     <div class="stat">
       <div class="stat-num" data-count="3">3</div>
-      <div class="stat-label">Product Categories</div>
+      <div class="stat-label" data-i18n="stat.categories">Product Categories</div>
     </div>
     <a class="stat"
        href="https://g.page/r/CUhQVECVmVUHEBM/review"
        target="_blank" rel="noopener" aria-label="See our Google reviews">
       <div class="stat-num" data-count="4.4" data-suffix="★" data-decimal="1">4.4★</div>
-      <div class="stat-label">Google Rating</div>
+      <div class="stat-label" data-i18n="stat.rating">Google Rating</div>
     </a>
     <div class="stat">
       <div class="stat-num">GST</div>
-      <div class="stat-label">Registered · Active</div>
+      <div class="stat-label" data-i18n="stat.gst">Registered · Active</div>
     </div>
   </div>
 
@@ -806,45 +878,45 @@
   <section class="section" id="products">
     <div class="section-header">
       <div class="reveal">
-        <div class="section-tag">What We Supply</div>
-        <div class="section-title">OUR PRODUCTS</div>
+        <div class="section-tag" data-i18n="products.tag">What We Supply</div>
+        <div class="section-title" data-i18n="products.title">OUR PRODUCTS</div>
       </div>
     </div>
     <div class="products-grid stagger">
       <div class="product-card reveal">
         <div class="product-icon-wrap">⚙️</div>
         <div class="product-num">01</div>
-        <div class="product-title">Mild Steel Pipes</div>
-        <p class="product-desc">High-quality MS pipes for industrial, structural, and plumbing applications. Available in a variety of grades, diameters, and wall thicknesses.</p>
+        <div class="product-title" data-i18n="p1.title">Mild Steel Pipes</div>
+        <p class="product-desc" data-i18n="p1.desc">High-quality MS pipes for industrial, structural, and plumbing applications. Available in a variety of grades, diameters, and wall thicknesses.</p>
         <ul class="product-specs">
-          <li>ERW &amp; Seamless variants</li>
-          <li>IS 1239 / IS 3589 compliant</li>
-          <li>Round, square &amp; rectangular sections</li>
-          <li>Custom cutting available</li>
+          <li data-i18n="p1.s1">ERW &amp; Seamless variants</li>
+          <li data-i18n="p1.s2">IS 1239 / IS 3589 compliant</li>
+          <li data-i18n="p1.s3">Round, square &amp; rectangular sections</li>
+          <li data-i18n="p1.s4">Custom cutting available</li>
         </ul>
       </div>
       <div class="product-card reveal">
         <div class="product-icon-wrap">🔵</div>
         <div class="product-num">02</div>
-        <div class="product-title">PVC &amp; CPVC Pipes</div>
-        <p class="product-desc">Durable PVC and CPVC pipes for water supply, drainage, and chemical handling. Lightweight, corrosion-resistant, and cost-effective.</p>
+        <div class="product-title" data-i18n="p2.title">PVC &amp; CPVC Pipes</div>
+        <p class="product-desc" data-i18n="p2.desc">Durable PVC and CPVC pipes for water supply, drainage, and chemical handling. Lightweight, corrosion-resistant, and cost-effective.</p>
         <ul class="product-specs">
-          <li>Pressure &amp; drainage grades</li>
-          <li>CPVC for hot water lines</li>
-          <li>IS 4985 / IS 15778 compliant</li>
-          <li>Wide diameter range stocked</li>
+          <li data-i18n="p2.s1">Pressure &amp; drainage grades</li>
+          <li data-i18n="p2.s2">CPVC for hot water lines</li>
+          <li data-i18n="p2.s3">IS 4985 / IS 15778 compliant</li>
+          <li data-i18n="p2.s4">Wide diameter range stocked</li>
         </ul>
       </div>
       <div class="product-card reveal">
         <div class="product-icon-wrap">🔧</div>
         <div class="product-num">03</div>
-        <div class="product-title">Pipe Fittings</div>
-        <p class="product-desc">Complete range of couplings, elbows, flanges, tees, and reducers. Compatible with all pipe types — steel and plastic alike.</p>
+        <div class="product-title" data-i18n="p3.title">Pipe Fittings</div>
+        <p class="product-desc" data-i18n="p3.desc">Complete range of couplings, elbows, flanges, tees, and reducers. Compatible with all pipe types — steel and plastic alike.</p>
         <ul class="product-specs">
-          <li>GI, MS &amp; stainless steel fittings</li>
-          <li>PVC &amp; CPVC fittings</li>
-          <li>Threaded &amp; socket weld types</li>
-          <li>All standard sizes in stock</li>
+          <li data-i18n="p3.s1">GI, MS &amp; stainless steel fittings</li>
+          <li data-i18n="p3.s2">PVC &amp; CPVC fittings</li>
+          <li data-i18n="p3.s3">Threaded &amp; socket weld types</li>
+          <li data-i18n="p3.s4">All standard sizes in stock</li>
         </ul>
       </div>
     </div>
@@ -855,50 +927,50 @@
   ============================================================ -->
   <section class="industries-section" id="industries">
     <div class="reveal">
-      <div class="section-tag">Who We Serve</div>
-      <div class="section-title">INDUSTRIES WE SUPPLY</div>
+      <div class="section-tag" data-i18n="ind.tag">Who We Serve</div>
+      <div class="section-title" data-i18n="ind.title">INDUSTRIES WE SUPPLY</div>
     </div>
     <div class="industries-grid stagger" style="margin-top:54px;">
       <div class="industry-card reveal">
         <div class="industry-icon">🏗️</div>
         <div>
-          <div class="industry-title">Construction &amp; Infrastructure</div>
-          <p class="industry-desc">Structural steel pipes and fittings for commercial and residential construction across Bengaluru.</p>
+          <div class="industry-title" data-i18n="i1.title">Construction &amp; Infrastructure</div>
+          <p class="industry-desc" data-i18n="i1.desc">Structural steel pipes and fittings for commercial and residential construction across Bengaluru.</p>
         </div>
       </div>
       <div class="industry-card reveal">
         <div class="industry-icon">🏭</div>
         <div>
-          <div class="industry-title">Industrial Manufacturing</div>
-          <p class="industry-desc">Bulk supply to factories and manufacturing units in Peenya Industrial Area and surrounding zones.</p>
+          <div class="industry-title" data-i18n="i2.title">Industrial Manufacturing</div>
+          <p class="industry-desc" data-i18n="i2.desc">Bulk supply to factories and manufacturing units in Peenya Industrial Area and surrounding zones.</p>
         </div>
       </div>
       <div class="industry-card reveal">
         <div class="industry-icon">🚰</div>
         <div>
-          <div class="industry-title">Plumbing &amp; Sanitation</div>
-          <p class="industry-desc">PVC, CPVC, and GI pipes for residential and commercial plumbing, drainage, and water supply.</p>
+          <div class="industry-title" data-i18n="i3.title">Plumbing &amp; Sanitation</div>
+          <p class="industry-desc" data-i18n="i3.desc">PVC, CPVC, and GI pipes for residential and commercial plumbing, drainage, and water supply.</p>
         </div>
       </div>
       <div class="industry-card reveal">
         <div class="industry-icon">⚡</div>
         <div>
-          <div class="industry-title">Utilities &amp; MEP</div>
-          <p class="industry-desc">Supply to HVAC, electrical conduit, and mechanical, electrical &amp; plumbing contractors.</p>
+          <div class="industry-title" data-i18n="i4.title">Utilities &amp; MEP</div>
+          <p class="industry-desc" data-i18n="i4.desc">Supply to HVAC, electrical conduit, and mechanical, electrical &amp; plumbing contractors.</p>
         </div>
       </div>
       <div class="industry-card reveal">
         <div class="industry-icon">🏘️</div>
         <div>
-          <div class="industry-title">Real Estate &amp; Housing</div>
-          <p class="industry-desc">Complete piping solutions for apartment complexes, gated communities, and townships.</p>
+          <div class="industry-title" data-i18n="i5.title">Real Estate &amp; Housing</div>
+          <p class="industry-desc" data-i18n="i5.desc">Complete piping solutions for apartment complexes, gated communities, and townships.</p>
         </div>
       </div>
       <div class="industry-card reveal">
         <div class="industry-icon">🔩</div>
         <div>
-          <div class="industry-title">Fabricators &amp; Contractors</div>
-          <p class="industry-desc">Reliable wholesale partner for fabricators, plumbing contractors, and civil engineering firms.</p>
+          <div class="industry-title" data-i18n="i6.title">Fabricators &amp; Contractors</div>
+          <p class="industry-desc" data-i18n="i6.desc">Reliable wholesale partner for fabricators, plumbing contractors, and civil engineering firms.</p>
         </div>
       </div>
     </div>
@@ -909,45 +981,45 @@
   ============================================================ -->
   <section class="why-section" id="why">
     <div class="why-left reveal-left">
-      <div class="section-tag">Why Choose Us</div>
-      <h2>QUALITY YOU CAN <span>TRUST</span></h2>
-      <p>With over 15 years in Bengaluru's industrial supply chain, we've built a reputation for reliable products, fair pricing, and fast fulfillment — from single orders to large wholesale contracts.</p>
-      <a href="#location" class="btn-outline">Get In Touch</a>
+      <div class="section-tag" data-i18n="why.tag">Why Choose Us</div>
+      <h2 data-i18n="why.h2">QUALITY YOU CAN <span>TRUST</span></h2>
+      <p data-i18n="why.desc">With over 15 years in Bengaluru's industrial supply chain, we've built a reputation for reliable products, fair pricing, and fast fulfillment — from single orders to large wholesale contracts.</p>
+      <a href="#location" class="btn-outline" data-i18n="why.cta">Get In Touch</a>
     </div>
     <div class="reveal-right">
       <div class="why-item">
         <div class="why-num">01</div>
         <div class="why-text">
-          <h4>Wide Product Range</h4>
-          <p>MS pipes, PVC, CPVC, and all related fittings under one roof at Peenya Industrial Area.</p>
+          <h4 data-i18n="why.1.h">Wide Product Range</h4>
+          <p data-i18n="why.1.p">MS pipes, PVC, CPVC, and all related fittings under one roof at Peenya Industrial Area.</p>
         </div>
       </div>
       <div class="why-item">
         <div class="why-num">02</div>
         <div class="why-text">
-          <h4>Wholesale Pricing</h4>
-          <p>Competitive rates for contractors, builders, and industrial buyers. Bulk discounts available.</p>
+          <h4 data-i18n="why.2.h">Wholesale Pricing</h4>
+          <p data-i18n="why.2.p">Competitive rates for contractors, builders, and industrial buyers. Bulk discounts available.</p>
         </div>
       </div>
       <div class="why-item">
         <div class="why-num">03</div>
         <div class="why-text">
-          <h4>Fast Delivery</h4>
-          <p>Quick order processing and timely dispatch across Bengaluru and surrounding regions.</p>
+          <h4 data-i18n="why.3.h">Fast Delivery</h4>
+          <p data-i18n="why.3.p">Quick order processing and timely dispatch across Bengaluru and surrounding regions.</p>
         </div>
       </div>
       <div class="why-item">
         <div class="why-num">04</div>
         <div class="why-text">
-          <h4>GST Compliant</h4>
-          <p>Fully registered with proper GST invoices issued for all commercial transactions.</p>
+          <h4 data-i18n="why.4.h">GST Compliant</h4>
+          <p data-i18n="why.4.p">Fully registered with proper GST invoices issued for all commercial transactions.</p>
         </div>
       </div>
       <div class="why-item">
         <div class="why-num">05</div>
         <div class="why-text">
-          <h4>Expert Guidance</h4>
-          <p>Our team helps you choose the right specifications and grade for your project requirements.</p>
+          <h4 data-i18n="why.5.h">Expert Guidance</h4>
+          <p data-i18n="why.5.p">Our team helps you choose the right specifications and grade for your project requirements.</p>
         </div>
       </div>
     </div>
@@ -958,13 +1030,13 @@
   ============================================================ -->
   <section class="location-section" id="location">
     <div class="location-info reveal-left">
-      <div class="section-tag">Find Us</div>
-      <h2>VISIT OUR WAREHOUSE</h2>
+      <div class="section-tag" data-i18n="loc.tag">Find Us</div>
+      <h2 data-i18n="loc.h2">VISIT OUR WAREHOUSE</h2>
 
       <div class="info-row">
         <div class="info-icon">📍</div>
         <div class="info-content">
-          <label>Address</label>
+          <label data-i18n="loc.addr.label">Address</label>
           <p>Site No. 8 &amp; 9, #491, Phase IV, Peenya II Stage,<br>Peenya Industrial Area, Bengaluru – 560058</p>
         </div>
       </div>
@@ -972,15 +1044,15 @@
       <div class="info-row">
         <div class="info-icon">🕐</div>
         <div class="info-content">
-          <label>Business Hours</label>
-          <p>Monday – Saturday: 10:00 AM – 7:00 PM<br>Sunday: Closed</p>
+          <label data-i18n="loc.hours.label">Business Hours</label>
+          <p data-i18n="loc.hours.val">Monday – Saturday: 10:00 AM – 7:00 PM<br>Sunday: Closed</p>
         </div>
       </div>
 
       <div class="info-row">
         <div class="info-icon">📞</div>
         <div class="info-content">
-          <label>Phone</label>
+          <label data-i18n="loc.phone.label">Phone</label>
           <a href="tel:08049734555">080-49734555</a>
         </div>
       </div>
@@ -988,7 +1060,7 @@
       <div class="info-row">
         <div class="info-icon">✉️</div>
         <div class="info-content">
-          <label>Email</label>
+          <label data-i18n="loc.email.label">Email</label>
           <a href="mailto:mahadurgapipes+web@gmail.com?subject=Inquiry%20from%20mahadurga.com%20Website">mahadurgapipes+web@gmail.com</a>
         </div>
       </div>
@@ -996,16 +1068,16 @@
       <div class="info-row">
         <div class="info-icon">🌐</div>
         <div class="info-content">
-          <label>Website</label>
+          <label data-i18n="loc.web.label">Website</label>
           <p>mahadurga.com</p>
         </div>
       </div>
 
       <div class="contact-actions">
         <a href="https://maps.google.com/?q=Mahadurga+Pipe+Distributors+Peenya+Bengaluru"
-           target="_blank" rel="noopener" class="btn-primary">Open in Google Maps</a>
+           target="_blank" rel="noopener" class="btn-primary" data-i18n="loc.maps">Open in Google Maps</a>
         <a href="https://wa.me/919343833940"
-           target="_blank" rel="noopener" class="btn-outline">WhatsApp Us</a>
+           target="_blank" rel="noopener" class="btn-outline" data-i18n="loc.whatsapp">WhatsApp Us</a>
       </div>
     </div>
 
@@ -1029,28 +1101,28 @@
           <img src="MDP-Final_Logo.png" alt="MDP Logo" />
           <span class="footer-logo-text">MAHADURGA PIPE DISTRIBUTORS</span>
         </div>
-        <p>Wholesale supplier of MS Pipes, PVC &amp; CPVC Pipes, and Pipe Fittings. Serving Bengaluru's industrial and construction sector since 2008.</p>
+        <p data-i18n="footer.brand.desc">Wholesale supplier of MS Pipes, PVC &amp; CPVC Pipes, and Pipe Fittings. Serving Bengaluru's industrial and construction sector since 2008.</p>
       </div>
       <div class="footer-col">
-        <h5>Quick Links</h5>
+        <h5 data-i18n="footer.links.title">Quick Links</h5>
         <ul>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#location">Contact</a></li>
+          <li><a href="#products" data-i18n="nav.products">Products</a></li>
+          <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
+          <li><a href="#why" data-i18n="nav.why">Why Us</a></li>
+          <li><a href="#location" data-i18n="footer.location">Location</a></li>
+          <li><a href="#location" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Contact</h5>
+        <h5 data-i18n="footer.contact.title">Contact</h5>
         <p>Peenya II Stage,<br>Bengaluru – 560058</p>
-        <p style="margin-top:12px;">Mon – Sat: 10AM – 7PM</p>
-        <p>Sunday: Closed</p>
+        <p style="margin-top:12px;" data-i18n="footer.hours">Mon – Sat: 10AM – 7PM</p>
+        <p data-i18n="footer.sunday">Sunday: Closed</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Mahadurga Pipe Distributors. All rights reserved.</p>
-      <p>GST Registered · Bengaluru, Karnataka · GSTIN: 29ABEFM8097N1ZA</p>
+      <p data-i18n="footer.copy">© 2026 Mahadurga Pipe Distributors. All rights reserved.</p>
+      <p data-i18n="footer.gst">GST Registered · Bengaluru, Karnataka · GSTIN: 29ABEFM8097N1ZA</p>
     </div>
   </footer>
 
