@@ -2,6 +2,15 @@
 
 ---
 
+## [2.3.1] — 2026-04-16
+
+### Fixed
+- **Hindi translations were visually invisible** in all heading elements — root cause: `Bebas Neue` has no Devanagari glyphs; combined with `-webkit-text-fill-color: transparent` (gradient clip) used on `h1 .word-blue` and `.why-left h2 span`, characters with no glyph rendered as completely invisible. Kannada was unaffected because macOS provides a Kannada system font that Bebas Neue falls back to correctly; Devanagari fallback behaved differently.
+- Added `Noto Sans Devanagari` (weights 300/400/500) to the Google Fonts import
+- Added `[data-lang="hi"]` CSS overrides that switch `h1 .word-blue`, `.hero-sub`, `.section-title`, `.product-title`, `.industry-title`, `.why-left h2`, and `.location-info h2` to `Noto Sans Devanagari` with `letter-spacing: 0` (Bebas Neue uses wide letter-spacing designed for Latin glyphs, which looks wrong on Devanagari)
+
+---
+
 ## [2.3.0] — 2026-04-16
 
 ### Added

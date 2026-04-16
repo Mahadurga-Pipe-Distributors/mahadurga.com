@@ -11,7 +11,7 @@
   <meta property="og:type" content="website"/>
   <title>Mahadurga Pipe Distributors | Wholesale Pipes & Fittings, Bengaluru</title>
   <link rel="icon" href="MDP-Final_Logo.png" type="image/png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" rel="stylesheet"/>
   <script src="theme-init.js"></script>
   <script type="application/ld+json">
   {
@@ -762,6 +762,23 @@
     .theme-toggle .icon-moon { display: none; }
     [data-theme="light"] .theme-toggle .icon-sun { display: none; }
     [data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+    /* ============================================================
+       HINDI / DEVANAGARI FONT OVERRIDES
+       Bebas Neue has no Devanagari glyphs. Where -webkit-text-fill-color
+       is transparent (gradient clip), missing glyphs = invisible text.
+       Force Noto Sans Devanagari for all heading-level elements in hi mode.
+    ============================================================ */
+    [data-lang="hi"] h1 .word-blue,
+    [data-lang="hi"] .hero-sub,
+    [data-lang="hi"] .section-title,
+    [data-lang="hi"] .product-title,
+    [data-lang="hi"] .industry-title,
+    [data-lang="hi"] .why-left h2,
+    [data-lang="hi"] .location-info h2 {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      letter-spacing: 0;
+    }
 
     @media (max-width: 900px) {
       .nav-right { gap: 10px; }
