@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex"/>
+  <meta name="description" content="Page not found — Mahadurga Pipe Distributors"/>
+  <title>404 · Page Not Found | Mahadurga Pipe Distributors</title>
+  <link rel="icon" href="MDP-Final_Logo.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script>
+    // Restore theme + language before first paint (same as theme-init.js)
+    (function () {
+      var t = localStorage.getItem('mdp-theme') || 'light';
+      var l = localStorage.getItem('mdp-lang')  || 'en';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.lang = l;
+    })();
+  </script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:     #07090f;
+      --bg2:    #0d1020;
+      --bg3:    #111525;
+      --blue:   #1a6fff;
+      --blue2:  #00cfff;
+      --red:    #e02020;
+      --text:   #e8edf8;
+      --muted:  #5a6380;
+      --border: #1c2240;
+    }
+    [data-theme="light"] {
+      --bg:     #f4f6fb;
+      --bg2:    #eaedf7;
+      --bg3:    #dde1f2;
+      --text:   #0d1020;
+      --muted:  #6b7399;
+      --border: #c5cae5;
+      --blue2:  #0070c0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.35;
+    }
+    [data-theme="light"] body::before { opacity: 0.05; }
+
+    /* Ambient glows */
+    .glow1, .glow2 {
+      position: fixed; pointer-events: none; z-index: 0;
+    }
+    .glow1 {
+      top: -200px; right: -150px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(26,111,255,0.13) 0%, transparent 65%);
+    }
+    .glow2 {
+      bottom: -250px; left: 10%;
+      width: 650px; height: 650px;
+      background: radial-gradient(circle, rgba(0,207,255,0.08) 0%, transparent 70%);
+    }
+
+    /* Grid bg */
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(26,111,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,111,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px; pointer-events: none;
+    }
+
+    /* ============================================================
+       TOP BAR — minimal, with logo + controls
+    ============================================================ */
+    .topbar {
+      position: relative; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(7,9,15,0.4);
+      backdrop-filter: blur(12px);
+    }
+    [data-theme="light"] .topbar { background: rgba(244,246,251,0.4); }
+
+    .topbar-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .topbar-logo img {
+      height: 36px; width: 36px; object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+    [data-theme="dark"] .topbar-logo img { mix-blend-mode: normal; }
+    .topbar-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.95rem; letter-spacing: 3px;
+      background: linear-gradient(90deg, #1a6fff, #00cfff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    .topbar-controls { display: flex; align-items: center; gap: 14px; }
+
+    .lang-toggle { display: flex; align-items: stretch; border: 1px solid var(--border); }
+    .lang-btn {
+      background: none; border: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.63rem; letter-spacing: 1.5px;
+      color: var(--muted); padding: 5px 9px;
+      transition: color 0.2s, background 0.2s; line-height: 1;
+    }
+    .lang-btn.active { color: var(--blue2); background: rgba(0,207,255,0.09); }
+    [data-theme="light"] .lang-btn.active { background: rgba(0,112,192,0.10); }
+    .lang-btn:hover:not(.active) { color: var(--text); }
+    .lang-sep { color: var(--border); align-self: center; pointer-events: none; user-select: none; padding: 0 1px; }
+
+    .theme-toggle {
+      background: none; border: 1px solid var(--border);
+      width: 30px; height: 30px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--blue2); color: var(--blue2); }
+    .theme-toggle .icon-moon { display: none; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+    /* ============================================================
+       MAIN — the 404 content
+    ============================================================ */
+    main {
+      flex: 1;
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 60px;
+      padding: 80px 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.67rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue2); border: 1px solid rgba(0,207,255,0.28);
+      padding: 6px 14px; margin-bottom: 28px;
+      opacity: 0; animation: fadeUp 0.6s 0.15s forwards;
+    }
+    [data-theme="light"] .tag { border-color: rgba(0,112,192,0.45); }
+    .tag::before {
+      content: ''; display: block; width: 6px; height: 6px;
+      background: var(--blue2); border-radius: 50%;
+    }
+
+    .big-404 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(7rem, 18vw, 16rem);
+      line-height: 0.85;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, #1a6fff 0%, #00cfff 55%, #1a6fff 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+      position: relative;
+      opacity: 0; animation: fadeUp 0.7s 0.3s forwards;
+    }
+    .big-404::after {
+      content: '';
+      position: absolute;
+      bottom: 8px; left: 2px;
+      width: 80px; height: 4px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: slideBar 0.8s 1s forwards;
+    }
+
+    .title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      letter-spacing: 2px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      opacity: 0; animation: fadeUp 0.6s 0.5s forwards;
+    }
+
+    .desc {
+      max-width: 480px;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 40px;
+      opacity: 0; animation: fadeUp 0.6s 0.65s forwards;
+    }
+
+    .actions {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s 0.8s forwards;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1a6fff, #00cfff);
+      color: #07090f; font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 0.77rem; letter-spacing: 2px; text-transform: uppercase;
+      padding: 14px 32px; text-decoration: none; border: none; cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s; display: inline-block;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent; color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-weight: 400;
+      font-size: 0.77rem; letter-spacing: 2px; text-transform: uppercase;
+      padding: 14px 32px; text-decoration: none; border: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s; display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--blue2); color: var(--blue2); }
+
+    /* Quick links list */
+    .quicklinks {
+      margin-top: 54px;
+      opacity: 0; animation: fadeUp 0.6s 0.95s forwards;
+    }
+    .quicklinks-label {
+      font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue2); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .quicklinks-label::before {
+      content: ''; display: block; width: 28px; height: 1px; background: var(--blue2);
+    }
+    .quicklinks ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0; }
+    .quicklinks ul li { border-right: 1px solid var(--border); }
+    .quicklinks ul li:last-child { border-right: none; }
+    .quicklinks ul li a {
+      display: block; padding: 8px 18px 8px 0;
+      margin-right: 18px;
+      text-decoration: none; color: var(--muted);
+      font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .quicklinks ul li:first-child a { padding-left: 0; }
+    .quicklinks ul li a:hover { color: var(--blue2); }
+
+    /* ============================================================
+       VISUAL — broken pipe illustration
+    ============================================================ */
+    .visual {
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 400px;
+      opacity: 0; animation: fadeIn 1.2s 0.7s forwards;
+    }
+    .visual svg {
+      width: 100%; max-width: 460px; height: auto;
+      filter: drop-shadow(0 0 30px rgba(26,111,255,0.3));
+    }
+    .pipe-a { animation: floatA 4s ease-in-out infinite; transform-origin: center; }
+    .pipe-b { animation: floatB 4.5s ease-in-out infinite; transform-origin: center; }
+    .spark { animation: sparkle 1.4s ease-in-out infinite; transform-origin: center; }
+    .spark:nth-child(2) { animation-delay: 0.3s; }
+    .spark:nth-child(3) { animation-delay: 0.7s; }
+    .spark:nth-child(4) { animation-delay: 1.0s; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer-strip {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 18px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.68rem; color: var(--muted);
+      background: var(--bg2);
+    }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes slideBar {
+      from { transform: scaleX(0); } to { transform: scaleX(1); }
+    }
+    @keyframes floatA {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%       { transform: translate(-6px, -4px) rotate(-1.5deg); }
+    }
+    @keyframes floatB {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%       { transform: translate(6px, 5px) rotate(1.5deg); }
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.7); }
+      50%       { opacity: 1;   transform: scale(1.1); }
+    }
+
+    /* ============================================================
+       HINDI / DEVANAGARI OVERRIDES
+    ============================================================ */
+    [data-lang="hi"] .big-404,
+    [data-lang="hi"] .title,
+    [data-lang="hi"] .topbar-logo-text {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      letter-spacing: 0;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1000px) {
+      main { grid-template-columns: 1fr; gap: 40px; padding: 50px 30px; text-align: left; }
+      .visual { min-height: 280px; order: -1; }
+      .visual svg { max-width: 320px; }
+      .topbar, .footer-strip { padding-left: 30px; padding-right: 30px; }
+    }
+    @media (max-width: 560px) {
+      .topbar { padding: 16px 20px; }
+      .topbar-logo-text { font-size: 0.78rem; letter-spacing: 2px; }
+      main { padding: 40px 20px; }
+      .quicklinks ul { flex-direction: column; }
+      .quicklinks ul li { border-right: none; border-bottom: 1px solid var(--border); }
+      .quicklinks ul li:last-child { border-bottom: none; }
+      .quicklinks ul li a { padding: 10px 0; margin-right: 0; }
+      .footer-strip {
+        padding: 16px 20px;
+        flex-direction: column; gap: 6px; text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="topbar-logo" href="/">
+      <img src="MDP-Final_Logo.png" alt="MDP Logo" />
+      <span class="topbar-logo-text" data-i18n="brand">MAHADURGA PIPE DISTRIBUTORS</span>
+    </a>
+    <div class="topbar-controls">
+      <div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="hi">हिंदी</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☽</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="content">
+      <div class="tag" data-i18n="tag">ERROR 404 · LOST CONNECTION</div>
+      <div class="big-404">404</div>
+      <h1 class="title" data-i18n="title">THIS PIPE LEADS NOWHERE</h1>
+      <p class="desc" data-i18n="desc">
+        Looks like the page you're after has come loose from the fitting. The link may be broken,
+        the page may have moved, or you may have typed the address incorrectly. Let's get you back
+        to something that flows.
+      </p>
+      <div class="actions">
+        <a href="/" class="btn-primary" data-i18n="cta.home">Back to Home</a>
+        <a href="/#location" class="btn-outline" data-i18n="cta.contact">Contact Us</a>
+      </div>
+
+      <div class="quicklinks">
+        <div class="quicklinks-label" data-i18n="ql.label">Or try one of these</div>
+        <ul>
+          <li><a href="/#products"   data-i18n="nav.products">Products</a></li>
+          <li><a href="/#industries" data-i18n="nav.industries">Industries</a></li>
+          <li><a href="/#why"        data-i18n="nav.why">Why Us</a></li>
+          <li><a href="/#location"   data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Broken-pipe SVG illustration -->
+    <div class="visual" aria-hidden="true">
+      <svg viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"  stop-color="#1a6fff"/>
+            <stop offset="100%" stop-color="#00cfff"/>
+          </linearGradient>
+          <linearGradient id="pipeGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"  stop-color="#00cfff"/>
+            <stop offset="100%" stop-color="#1a6fff"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Pipe A: top-left, broken end angled down-right -->
+        <g class="pipe-a">
+          <!-- Main pipe body -->
+          <rect x="20"  y="130" width="180" height="50" rx="4"
+                fill="none" stroke="url(#pipeGrad)" stroke-width="3"/>
+          <!-- Flange at left -->
+          <rect x="10"  y="120" width="14"  height="70" rx="2"
+                fill="none" stroke="url(#pipeGrad)" stroke-width="3"/>
+          <rect x="14"  y="125" width="6"   height="60" rx="1"
+                fill="url(#pipeGrad)" opacity="0.2"/>
+          <!-- Ridges on pipe -->
+          <line x1="60"  y1="130" x2="60"  y2="180" stroke="url(#pipeGrad)" stroke-width="1" opacity="0.35"/>
+          <line x1="100" y1="130" x2="100" y2="180" stroke="url(#pipeGrad)" stroke-width="1" opacity="0.35"/>
+          <line x1="140" y1="130" x2="140" y2="180" stroke="url(#pipeGrad)" stroke-width="1" opacity="0.35"/>
+          <line x1="180" y1="130" x2="180" y2="180" stroke="url(#pipeGrad)" stroke-width="1" opacity="0.35"/>
+          <!-- Jagged broken end -->
+          <path d="M 200 130 L 210 138 L 204 148 L 214 158 L 206 168 L 213 180 L 200 180 Z"
+                fill="none" stroke="url(#pipeGrad)" stroke-width="3" stroke-linejoin="round"/>
+        </g>
+
+        <!-- Pipe B: bottom-right, broken end angled up-left -->
+        <g class="pipe-b">
+          <rect x="260" y="220" width="180" height="50" rx="4"
+                fill="none" stroke="url(#pipeGrad2)" stroke-width="3"/>
+          <!-- Flange at right -->
+          <rect x="436" y="210" width="14" height="70" rx="2"
+                fill="none" stroke="url(#pipeGrad2)" stroke-width="3"/>
+          <rect x="440" y="215" width="6"  height="60" rx="1"
+                fill="url(#pipeGrad2)" opacity="0.2"/>
+          <line x1="300" y1="220" x2="300" y2="270" stroke="url(#pipeGrad2)" stroke-width="1" opacity="0.35"/>
+          <line x1="340" y1="220" x2="340" y2="270" stroke="url(#pipeGrad2)" stroke-width="1" opacity="0.35"/>
+          <line x1="380" y1="220" x2="380" y2="270" stroke="url(#pipeGrad2)" stroke-width="1" opacity="0.35"/>
+          <line x1="420" y1="220" x2="420" y2="270" stroke="url(#pipeGrad2)" stroke-width="1" opacity="0.35"/>
+          <!-- Jagged broken end -->
+          <path d="M 260 220 L 250 228 L 256 238 L 246 248 L 254 258 L 247 270 L 260 270 Z"
+                fill="none" stroke="url(#pipeGrad2)" stroke-width="3" stroke-linejoin="round"/>
+        </g>
+
+        <!-- Gap / sparks between the two broken ends -->
+        <g>
+          <circle class="spark" cx="225" cy="190" r="4"  fill="#e02020"/>
+          <circle class="spark" cx="240" cy="205" r="3"  fill="#00cfff"/>
+          <circle class="spark" cx="218" cy="215" r="2.5" fill="#e02020"/>
+          <circle class="spark" cx="248" cy="185" r="2"  fill="#1a6fff"/>
+        </g>
+
+        <!-- Dripping water droplet from pipe A -->
+        <ellipse cx="207" cy="195" rx="3" ry="5" fill="#00cfff" opacity="0.6">
+          <animate attributeName="cy" values="195;240;195" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.8;0;0.8" dur="2.5s" repeatCount="indefinite"/>
+        </ellipse>
+      </svg>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer-strip">
+    <span data-i18n="footer.copy">© 2026 Mahadurga Pipe Distributors</span>
+    <span data-i18n="footer.code">HTTP 404 · Resource not found</span>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS — theme, lang, minimal i18n
+  ============================================================ -->
+  <script>
+    // Minimal translation table for this page only.
+    const T = {
+      en: {
+        'brand':        'MAHADURGA PIPE DISTRIBUTORS',
+        'tag':          'ERROR 404 · LOST CONNECTION',
+        'title':        'THIS PIPE LEADS NOWHERE',
+        'desc':         "Looks like the page you're after has come loose from the fitting. The link may be broken, the page may have moved, or you may have typed the address incorrectly. Let's get you back to something that flows.",
+        'cta.home':     'Back to Home',
+        'cta.contact':  'Contact Us',
+        'ql.label':     'Or try one of these',
+        'nav.products': 'Products',
+        'nav.industries':'Industries',
+        'nav.why':      'Why Us',
+        'nav.contact':  'Contact',
+        'footer.copy':  '© 2026 Mahadurga Pipe Distributors',
+        'footer.code':  'HTTP 404 · Resource not found',
+      },
+      hi: {
+        'brand':        'महादुर्गा पाइप वितरक',
+        'tag':          'त्रुटि 404 · कनेक्शन टूटा',
+        'title':        'यह पाइप कहीं नहीं जाता',
+        'desc':         'ऐसा लगता है कि आप जिस पृष्ठ की तलाश कर रहे हैं वह फिटिंग से निकल गया है। लिंक टूटा हो सकता है, पृष्ठ स्थानांतरित हो सकता है, या आपने पता गलत टाइप किया हो सकता है। आइए आपको वापस मुख्य पृष्ठ पर ले चलते हैं।',
+        'cta.home':     'मुख्य पृष्ठ पर जाएं',
+        'cta.contact':  'संपर्क करें',
+        'ql.label':     'या इनमें से एक आज़माएं',
+        'nav.products': 'उत्पाद',
+        'nav.industries':'उद्योग',
+        'nav.why':      'हमें क्यों',
+        'nav.contact':  'संपर्क',
+        'footer.copy':  '© 2026 महादुर्गा पाइप वितरक',
+        'footer.code':  'HTTP 404 · संसाधन नहीं मिला',
+      },
+      kn: {
+        'brand':        'ಮಹಾದುರ್ಗ ಪೈಪ್ ವಿತರಕರು',
+        'tag':          'ದೋಷ 404 · ಸಂಪರ್ಕ ಕಡಿತ',
+        'title':        'ಈ ಪೈಪ್ ಎಲ್ಲಿಯೂ ಹೋಗುವುದಿಲ್ಲ',
+        'desc':         'ನೀವು ಹುಡುಕುತ್ತಿರುವ ಪುಟ ಫಿಟ್ಟಿಂಗ್‌ನಿಂದ ಸಡಿಲವಾಗಿದೆ ಎಂದು ತೋರುತ್ತದೆ. ಲಿಂಕ್ ಮುರಿದಿರಬಹುದು, ಪುಟ ಸ್ಥಳಾಂತರಗೊಂಡಿರಬಹುದು, ಅಥವಾ ನೀವು ವಿಳಾಸವನ್ನು ತಪ್ಪಾಗಿ ಟೈಪ್ ಮಾಡಿರಬಹುದು. ನಿಮ್ಮನ್ನು ಮುಖ್ಯ ಪುಟಕ್ಕೆ ಮರಳಿ ಕರೆದೊಯ್ಯೋಣ.',
+        'cta.home':     'ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ',
+        'cta.contact':  'ಸಂಪರ್ಕಿಸಿ',
+        'ql.label':     'ಅಥವಾ ಇವುಗಳಲ್ಲಿ ಒಂದನ್ನು ಪ್ರಯತ್ನಿಸಿ',
+        'nav.products': 'ಉತ್ಪನ್ನಗಳು',
+        'nav.industries':'ಕೈಗಾರಿಕೆಗಳು',
+        'nav.why':      'ನಮ್ಮನ್ನೇಕೆ',
+        'nav.contact':  'ಸಂಪರ್ಕಿಸಿ',
+        'footer.copy':  '© 2026 ಮಹಾದುರ್ಗ ಪೈಪ್ ವಿತರಕರು',
+        'footer.code':  'HTTP 404 · ಸಂಪನ್ಮೂಲ ಸಿಗಲಿಲ್ಲ',
+      }
+    };
+
+    function applyLang(lang) {
+      const t = T[lang] || T.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (t[k] !== undefined) el.textContent = t[k];
+      });
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    function setLang(lang) {
+      localStorage.setItem('mdp-lang', lang);
+      applyLang(lang);
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('mdp-theme', theme);
+    }
+
+    // Wire up controls
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      setTheme(cur === 'light' ? 'dark' : 'light');
+    });
+
+    document.getElementById('langToggle').addEventListener('click', e => {
+      const btn = e.target.closest('.lang-btn');
+      if (btn) setLang(btn.dataset.lang);
+    });
+
+    // Restore lang on load (theme already restored pre-paint)
+    (function () {
+      const storedLang = localStorage.getItem('mdp-lang') || 'en';
+      applyLang(storedLang);
+    })();
+  </script>
+
+</body>
+</html>

@@ -2,6 +2,23 @@
 
 ---
 
+## [2.4.0] — 2026-04-16
+
+### Added
+- **`404.html`** — custom GitHub Pages 404 page matching the main site design:
+  - Inline theme + language restoration script (same logic as `theme-init.js`) runs before first paint to prevent flash
+  - Minimal i18n table with English, Hindi, and Kannada translations for all page strings (tag, title, description, CTAs, quick links, footer)
+  - Language switcher (हिंदी | EN | ಕನ್ನಡ) and theme toggle (☀/☽) matching the main nav controls
+  - Animated broken-pipe SVG illustration: two disconnected pipe sections (with flanges, ridges, and jagged broken ends) that float independently, sparks pulsing in the gap, and an animated water drip falling from the break
+  - "THIS PIPE LEADS NOWHERE" headline with the same Bebas Neue gradient style as the main site
+  - Quick links row to Products, Industries, Why Us, Contact
+  - Responsive layout: two-column on desktop (content + visual), single-column on mobile (visual above content)
+  - `[data-lang="hi"]` Devanagari font overrides for `.title` and `.topbar-logo-text` (same fix as main site)
+  - `mix-blend-mode: multiply` on logo image (with `[data-theme="dark"]` revert), matching the main site fix
+  - `<meta name="robots" content="noindex">` so the error page is not indexed by search engines
+
+---
+
 ## [2.3.2] — 2026-04-16
 
 ### Fixed
