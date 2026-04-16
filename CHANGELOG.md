@@ -2,6 +2,13 @@
 
 ---
 
+## [2.3.2] — 2026-04-16
+
+### Fixed
+- **Logo images displayed with a visible white background** — `MDP-Final_Logo.png` is an indexed-color PNG with no alpha channel (`tRNS` chunk absent); white background is baked into the image pixels. Applied `mix-blend-mode: multiply` to all three logo `<img>` elements (nav, hero showcase, footer). In light mode (`--bg: #f4f6fb`), multiply composites white logo pixels with the near-white page background, making the white box mathematically invisible while preserving the logo's colours. Added `[data-theme="dark"]` override to revert to `mix-blend-mode: normal` because multiply on a near-black background (`#07090f`) crushes the logo's own colour channels to near-zero, making the logo itself invisible — which is worse than showing the white background.
+
+---
+
 ## [2.3.1] — 2026-04-16
 
 ### Fixed
