@@ -1,5 +1,53 @@
 # Changelog — Mahadurga Pipe Distributors Website
 
+---
+
+## [2.3.0] — 2026-04-16
+
+### Added
+- **Hindi language support** — full `hi` (Devanagari) translation block added to `main.js`, covering all 60+ `data-i18n` keys across nav, hero, stats, products, industries, why us, location, and footer sections
+- Language switcher order updated to **हिंदी | EN | ಕನ್ನಡ** (Hindi first, as the new addition)
+- `applyTranslations()` now sets `lang="hi"` on `<html>` when Hindi is active (correct for screen readers and search engines)
+
+---
+
+## [2.2.0] — 2026-04-13
+
+### Added
+- **Dark / light mode toggle** — `☀` / `☽` button in the nav bar; preference persisted in `localStorage`
+- **English / Kannada language switcher** — `EN | ಕನ್ನಡ` pill in the nav bar; full Kannada (`kn`) translation block covering all `data-i18n` keys site-wide; preference persisted in `localStorage`
+- `theme-init.js` — tiny `<head>` script that restores stored theme and language before first paint, preventing flash-of-wrong-theme on reload
+- `.nav-right` flex group wrapping nav links, lang pill, and theme button; visible on both desktop and hamburger mobile layout
+
+### Changed
+- **Default theme switched to light** — site now loads in light mode for new visitors (previously dark)
+- All JavaScript extracted from `index.html` into `main.js` (for `script-src 'self'` CSP compliance); JSON-LD block unaffected
+
+### Fixed
+- Light mode CSS variable overrides added for nav, mobile menu, map embed, product number ghost text, and active lang button background
+- Hero-tag border (`rgba` colour) was invisible in light mode — corrected to use an opaque-enough blue tint
+
+### Added — Contact details (same session)
+- Real phone number wired up: **080-49734555** — `tel:08049734555` href + `+918049734555` in JSON-LD schema
+- Real WhatsApp number wired up: **+91 93438 33940** — `wa.me/919343833940` in location section and FAB
+- Email display updated to `mahadurgapipes+web@gmail.com` everywhere; `mailto:` href routes to `mahadurgapipes+web@gmail.com?subject=Inquiry%20from%20mahadurga.com%20Website`
+- All `TODO` placeholder comments removed from the codebase
+
+---
+
+## [2.1.0] — 2026-04-11
+
+### Added
+- **Email contact row** in the "Visit Our Warehouse" location section (between Phone and Website rows) — `✉️` icon, displays `mahadurgapipes+web@gmail.com`, mailto href with pre-filled subject for Gmail label filtering
+- **Google Rating stat made clickable** — wraps the 4.4★ stat block in `<a class="stat">` linking to the Google Business Profile reviews page (`https://share.google/SkPvAURwc6F8KMJ31`), `target="_blank" rel="noopener"`; added `a.stat` CSS reset so it renders identically to non-link stat blocks
+- **`robots.txt`** — allows all crawlers (`User-agent: *`), points to sitemap at `https://mahadurga.com/sitemap.xml`
+- **`sitemap.xml`** — lists homepage and all 4 anchor sections (`/#products`, `/#industries`, `/#why`, `/#location`) with priority weights
+- **`CLAUDE.md`** — project context, section map, contact details, and changelog instructions for Claude Code sessions
+- **LocalBusiness JSON-LD schema** (`application/ld+json`) for rich results and local SEO — includes name, URL, logo, address, geo coordinates, phone, email, opening hours, aggregate rating, and `sameAs` links
+- **Real GSTIN** (`29ABEFM8097N1ZA`) added to JSON-LD `taxID` field and footer bottom bar
+
+---
+
 ## [2.0.0] — 2026-03-27
 
 ### Fixed
@@ -38,7 +86,7 @@
 - "Get In Touch" CTA button added to the Why Us section
 
 ### Added — Contact
-- Phone number row in the Location/Contact section (placeholder — update `+91XXXXXXXXXX`)
+- Phone number row in the Location/Contact section
 - WhatsApp CTA button in the contact actions row
 
 ### Added — Floating UI
@@ -65,6 +113,9 @@
 
 ---
 
-## TODOs (Content to fill in)
-- **Phone number**: replace `+91XXXXXXXXXX` in the phone `<a href="tel:...">` and display text
-- **WhatsApp number**: replace `91XXXXXXXXXX` in the 3 WhatsApp `href` attributes
+## [1.x] — Pre-2026 (initial commits)
+
+- `init` — initial repo setup
+- CNAME configured (multiple iterations) for `mahadurga.com`
+- Logo added (`MDP-Final_Logo.png`)
+- Minor tweaks and "Site Under Construction" placeholder period

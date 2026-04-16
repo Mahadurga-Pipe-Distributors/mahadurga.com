@@ -4,6 +4,17 @@ Instructions and context for Claude Code when working in this repo.
 
 ---
 
+## MANDATORY: Changelog Rule
+
+**Every commit must be accompanied by an update to `CHANGELOG.md`.**
+
+- Add a new version section (bump the minor version for features, patch for fixes) with today's date
+- Document every change made: what was added, changed, or fixed — be specific (file names, key names, behaviour)
+- Do this **before** committing — `CHANGELOG.md` must be included in the same commit as the code changes
+- Never push without updating `CHANGELOG.md` first
+
+---
+
 ## Project Overview
 
 **Client:** Mahadurga Pipe Distributors (MDP)
