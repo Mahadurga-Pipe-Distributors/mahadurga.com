@@ -7,12 +7,68 @@
   <meta name="keywords" content="pipe distributors bengaluru, MS pipes peenya, PVC pipes bengaluru, pipe fittings wholesale, CPVC pipes bengaluru, Mahadurga pipes"/>
   <meta property="og:title" content="Mahadurga Pipe Distributors | Bengaluru"/>
   <meta property="og:description" content="Wholesale supplier of MS Pipes, PVC & CPVC Pipes, and Pipe Fittings. Serving Bengaluru's industrial sector since 2008."/>
-  <meta property="og:image" content="MDP-Final_Logo.png"/>
+  <meta property="og:image" content="https://mahadurga.com/og-image.png"/>
   <meta property="og:type" content="website"/>
   <title>Mahadurga Pipe Distributors | Wholesale Pipes & Fittings, Bengaluru</title>
   <link rel="icon" href="MDP-Final_Logo.png" type="image/png"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" rel="stylesheet"/>
   <script src="theme-init.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer wholesale pricing for bulk orders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer competitive wholesale pricing for bulk orders. Discounts depend on product type and order volume. Contact us or visit the warehouse for a quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What pipe brands do you stock?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We stock products from leading Indian manufacturers conforming to IS standards (IS 1239, IS 3589, IS 4985, IS 15778). Please call or visit us for specific brand availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide GST invoices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We are GST registered (GSTIN: 29ABEFM8097N1ZA) and issue proper tax invoices for every transaction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you deliver to my site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We supply to locations across Bengaluru and surrounding districts. For large orders, outstation delivery can be arranged. Contact us to discuss your requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do custom pipe cutting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer custom cutting for MS pipes to your required lengths. Please enquire in advance for large-volume cutting jobs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your business hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are open Monday to Saturday, 10:00 AM to 7:00 PM. Closed on Sundays."
+        }
+      }
+    ]
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -787,6 +843,303 @@
       .nav-right { gap: 10px; }
       .lang-btn { padding: 5px 6px; }
     }
+
+    /* ============================================================
+       BRAND LOGOS STRIP
+    ============================================================ */
+    .brands-section {
+      padding: 60px 60px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .brands-header { text-align: center; margin-bottom: 40px; }
+    .brands-strip {
+      display: flex; flex-wrap: wrap;
+      gap: 14px; justify-content: center; align-items: center;
+    }
+    .brand-item {
+      width: 160px; height: 72px;
+      border: 1px solid var(--border);
+      background: var(--bg2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.69rem; letter-spacing: 1.8px; text-transform: uppercase;
+      color: var(--muted);
+      transition: border-color 0.25s, color 0.25s, background 0.25s;
+      filter: grayscale(1); opacity: 0.55;
+    }
+    .brand-item:hover {
+      border-color: var(--blue2); color: var(--blue2);
+      background: var(--bg3); filter: none; opacity: 1;
+    }
+
+    /* ============================================================
+       MILESTONES TIMELINE
+    ============================================================ */
+    .timeline-section {
+      padding: 100px 60px;
+      background: var(--bg2);
+    }
+    .timeline-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+      align-items: start;
+    }
+    .timeline-intro p {
+      font-size: 0.89rem; line-height: 1.85; color: var(--muted); margin-top: 20px;
+    }
+    .timeline {
+      position: relative;
+      display: flex; flex-direction: column;
+    }
+    .timeline::before {
+      content: ''; position: absolute;
+      left: 40px; top: 0; bottom: 0; width: 1px;
+      background: var(--border);
+    }
+    .timeline-item {
+      display: flex; position: relative;
+      padding-left: 90px; padding-bottom: 36px;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot {
+      position: absolute; left: 34px; top: 5px;
+      width: 13px; height: 13px; border-radius: 50%;
+      background: var(--blue); border: 2px solid var(--bg2);
+      box-shadow: 0 0 0 2px var(--blue); z-index: 1;
+    }
+    .timeline-year {
+      position: absolute; left: 0; top: 0;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 2px;
+      background: linear-gradient(90deg, #1a6fff, #00cfff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .timeline-body h4 {
+      font-size: 0.86rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 5px;
+    }
+    .timeline-body p { font-size: 0.77rem; color: var(--muted); line-height: 1.65; }
+
+    /* ============================================================
+       PROPRIETOR BIO
+    ============================================================ */
+    .proprietor-section { padding: 100px 60px; background: var(--bg); }
+    .prop-grid {
+      display: grid; grid-template-columns: 260px 1fr; gap: 80px; align-items: center;
+    }
+    .prop-photo {
+      width: 100%; aspect-ratio: 3/4;
+      background: var(--bg2); border: 1px solid var(--border);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; position: relative; overflow: hidden;
+    }
+    .prop-photo-icon { font-size: 3.5rem; opacity: 0.25; }
+    .prop-photo-label {
+      font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    }
+    .prop-photo::after {
+      content: ''; position: absolute; inset: 0;
+      border: 1px dashed rgba(26,111,255,0.2);
+      pointer-events: none;
+    }
+    .prop-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 3vw, 3rem); letter-spacing: 2px;
+      margin-bottom: 6px; line-height: 1; margin-top: 14px;
+    }
+    .prop-role {
+      font-size: 0.67rem; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--blue2); margin-bottom: 24px;
+    }
+    .prop-divider { width: 36px; height: 1px; background: var(--border); margin-bottom: 20px; }
+    .prop-bio { font-size: 0.87rem; line-height: 1.85; color: var(--muted); max-width: 520px; }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials-section { padding: 100px 60px; background: var(--bg2); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 54px;
+    }
+    .testimonial-card {
+      background: var(--bg); padding: 36px 30px;
+      border: 1px solid var(--border); position: relative;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .testimonial-card:hover {
+      background: var(--bg3); border-color: rgba(26,111,255,0.3);
+    }
+    .test-verified-tag {
+      position: absolute; top: 14px; right: 14px;
+      font-size: 0.56rem; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--blue2); border: 1px solid rgba(0,207,255,0.25); padding: 3px 8px;
+    }
+    .test-quote-icon {
+      font-family: 'Bebas Neue', sans-serif; font-size: 4rem;
+      line-height: 0.8; color: var(--blue); opacity: 0.3;
+      display: block; margin-bottom: 14px;
+    }
+    .test-stars { color: #f5c518; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 16px; }
+    .test-text {
+      font-size: 0.82rem; line-height: 1.8; color: var(--text);
+      margin-bottom: 24px; font-style: italic;
+    }
+    .test-author-name { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
+    .test-author-role {
+      font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+    }
+
+    /* ============================================================
+       NOTABLE PROJECTS
+    ============================================================ */
+    .projects-section { padding: 100px 60px; background: var(--bg); }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 54px;
+    }
+    .project-card {
+      background: var(--bg2); padding: 30px 28px;
+      border: 1px solid var(--border); position: relative; overflow: hidden;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .project-card:hover { background: var(--bg3); border-color: rgba(26,111,255,0.3); }
+    .project-card::before {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #1a6fff, #00cfff);
+      transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+    }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-year {
+      font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem; letter-spacing: 3px;
+      color: var(--blue2); margin-bottom: 10px;
+    }
+    .project-name {
+      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.3px;
+      margin-bottom: 10px; line-height: 1.4;
+    }
+    .project-scope { font-size: 0.75rem; color: var(--muted); line-height: 1.65; }
+
+    /* ============================================================
+       SERVICE AREA
+    ============================================================ */
+    .service-area-section {
+      padding: 80px 60px; background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .sa-layout {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;
+    }
+    .sa-intro p { font-size: 0.87rem; line-height: 1.85; color: var(--muted); margin-top: 20px; }
+    .sa-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .sa-tag {
+      font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 7px 14px; border: 1px solid var(--border);
+      color: var(--muted); background: var(--bg);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .sa-tag:hover { border-color: var(--blue2); color: var(--blue2); background: var(--bg3); }
+
+    /* ============================================================
+       WAREHOUSE GALLERY
+    ============================================================ */
+    .gallery-section { padding: 100px 60px; background: var(--bg); }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 54px;
+    }
+    .gallery-item {
+      aspect-ratio: 4/3; background: var(--bg2);
+      border: 1px solid var(--border); overflow: hidden; position: relative;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: border-color 0.3s;
+    }
+    .gallery-item:hover { border-color: rgba(26,111,255,0.45); }
+    .gallery-placeholder {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 8px; pointer-events: none;
+    }
+    .gallery-placeholder-icon { font-size: 2rem; opacity: 0.25; }
+    .gallery-placeholder-text {
+      font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(7,9,15,0.72) 0%, transparent 55%);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: flex-end; padding: 14px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-caption { font-size: 0.66rem; letter-spacing: 1.5px; text-transform: uppercase; color: #e8edf8; }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq-section { padding: 100px 60px; background: var(--bg2); }
+    .faq-layout {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;
+    }
+    .faq-intro p { font-size: 0.87rem; line-height: 1.85; color: var(--muted); margin-top: 20px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; gap: 20px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.86rem;
+      font-weight: 400; color: var(--text); transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--blue2); }
+    .faq-q-icon {
+      font-size: 1.2rem; flex-shrink: 0; line-height: 1;
+      color: var(--muted); transition: transform 0.3s ease, color 0.2s;
+    }
+    .faq-item.open .faq-q { color: var(--blue2); }
+    .faq-item.open .faq-q-icon { transform: rotate(45deg); color: var(--blue2); }
+    .faq-a {
+      font-size: 0.81rem; color: var(--muted); line-height: 1.8;
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.38s ease, padding-bottom 0.38s ease;
+    }
+    .faq-item.open .faq-a { max-height: 240px; padding-bottom: 20px; }
+
+    /* ============================================================
+       RESPONSIVE — NEW SECTIONS
+    ============================================================ */
+    @media (max-width: 1100px) {
+      .brands-section { padding: 50px 30px; }
+      .timeline-section, .proprietor-section, .testimonials-section,
+      .projects-section, .gallery-section, .faq-section { padding: 80px 30px; }
+      .service-area-section { padding: 60px 30px; }
+    }
+
+    @media (max-width: 900px) {
+      .brands-section { padding: 40px 20px; }
+      .brand-item { width: 130px; height: 60px; font-size: 0.62rem; }
+
+      .timeline-section { padding: 60px 20px; }
+      .timeline-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      .proprietor-section { padding: 60px 20px; }
+      .prop-grid { grid-template-columns: 1fr; gap: 40px; }
+      .prop-photo { max-width: 220px; }
+
+      .testimonials-section { padding: 60px 20px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .projects-section { padding: 60px 20px; }
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+
+      .service-area-section { padding: 50px 20px; }
+      .sa-layout { grid-template-columns: 1fr; gap: 30px; }
+
+      .gallery-section { padding: 60px 20px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+
+      .faq-section { padding: 60px 20px; }
+      .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 560px) {
+      .brand-item { width: 44%; height: 52px; font-size: 0.58rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -906,6 +1259,7 @@
         <div class="section-tag" data-i18n="products.tag">What We Supply</div>
         <div class="section-title" data-i18n="products.title">OUR PRODUCTS</div>
       </div>
+      <a href="/catalog/MDP-Catalog-2026.pdf" download class="btn-outline reveal" data-i18n="products.catalog">↓ Download Catalog</a>
     </div>
     <div class="products-grid stagger">
       <div class="product-card reveal">
@@ -1002,6 +1356,81 @@
   </section>
 
   <!-- ============================================================
+       BRAND LOGOS / PARTNERS STRIP
+  ============================================================ -->
+  <section class="brands-section" id="partners">
+    <div class="brands-header reveal">
+      <div class="section-tag" style="justify-content:center;" data-i18n="brands.tag">Trusted By</div>
+      <div class="section-title" data-i18n="brands.title">OUR CLIENTS &amp; PARTNERS</div>
+    </div>
+    <div class="brands-strip stagger">
+      <div class="brand-item reveal">CLIENT NAME 01</div>
+      <div class="brand-item reveal">CLIENT NAME 02</div>
+      <div class="brand-item reveal">CLIENT NAME 03</div>
+      <div class="brand-item reveal">CLIENT NAME 04</div>
+      <div class="brand-item reveal">CLIENT NAME 05</div>
+      <div class="brand-item reveal">CLIENT NAME 06</div>
+      <div class="brand-item reveal">CLIENT NAME 07</div>
+      <div class="brand-item reveal">CLIENT NAME 08</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MILESTONES TIMELINE
+  ============================================================ -->
+  <section class="timeline-section" id="milestones">
+    <div class="timeline-inner">
+      <div class="timeline-intro reveal-left">
+        <div class="section-tag" data-i18n="ms.tag">Our Journey</div>
+        <div class="section-title" data-i18n="ms.title">15+ YEARS OF GROWTH</div>
+        <p data-i18n="ms.intro">From a single product line in Peenya to a trusted wholesale partner for 500+ clients — here's how Mahadurga grew.</p>
+      </div>
+      <div class="timeline reveal-right">
+        <div class="timeline-item">
+          <div class="timeline-year">2008</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h4 data-i18n="ms.1.h">Founded in Peenya</h4>
+            <p data-i18n="ms.1.p">Mahadurga Pipe Distributors established at Peenya Industrial Area, Bengaluru, as a wholesale pipe supplier serving local contractors.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h4 data-i18n="ms.2.h">Expanded Product Range</h4>
+            <p data-i18n="ms.2.p">Added PVC &amp; CPVC pipe lines alongside the original MS pipe inventory to serve the growing plumbing and housing market.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h4 data-i18n="ms.3.h">GST Registration</h4>
+            <p data-i18n="ms.3.p">Registered under GST (GSTIN: 29ABEFM8097N1ZA), enabling seamless B2B transactions with proper tax invoicing for all clients.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h4 data-i18n="ms.4.h">500+ Active Clients</h4>
+            <p data-i18n="ms.4.p">Surpassed 500 active clients across Bengaluru — contractors, builders, fabricators, and industrial manufacturers.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-dot" style="background:var(--blue2);box-shadow:0 0 0 2px var(--blue2);"></div>
+          <div class="timeline-body">
+            <h4 data-i18n="ms.5.h">15+ Years &amp; Growing</h4>
+            <p data-i18n="ms.5.p">Continuing to serve as Bengaluru's trusted pipe distributor, with expanded inventory and a 4.4★ Google Rating.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        WHY US
   ============================================================ -->
   <section class="why-section" id="why">
@@ -1046,6 +1475,192 @@
           <h4 data-i18n="why.5.h">Expert Guidance</h4>
           <p data-i18n="why.5.p">Our team helps you choose the right specifications and grade for your project requirements.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROPRIETOR BIO
+  ============================================================ -->
+  <section class="proprietor-section" id="about">
+    <div class="prop-grid">
+      <div class="reveal-left">
+        <div class="prop-photo">
+          <div class="prop-photo-icon">👤</div>
+          <div class="prop-photo-label">Photo Placeholder</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-tag" data-i18n="prop.tag">About The Proprietor</div>
+        <div class="prop-name" data-i18n="prop.name">PROPRIETOR NAME</div>
+        <div class="prop-role" data-i18n="prop.role">Founder &amp; Proprietor · Mahadurga Pipe Distributors</div>
+        <div class="prop-divider"></div>
+        <p class="prop-bio" data-i18n="prop.bio">With over 15 years of hands-on experience in the pipe distribution industry, [Name] founded Mahadurga Pipe Distributors with a vision to provide quality, IS-compliant materials to Bengaluru's growing construction and industrial sector. Starting from a single product line in Peenya, the business has grown into a trusted wholesale partner serving 500+ clients across Karnataka.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="reveal">
+      <div class="section-tag" data-i18n="test.tag">What Our Clients Say</div>
+      <div class="section-title" data-i18n="test.title">CLIENT TESTIMONIALS</div>
+    </div>
+    <div class="testimonials-grid stagger">
+      <div class="testimonial-card reveal">
+        <span class="test-verified-tag">Verified</span>
+        <span class="test-quote-icon">"</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text" data-i18n="t1.text">Reliable supplier for all our MS pipe requirements. Good quality, fair price, and they always have stock ready. We've been ordering from Mahadurga for over 3 years now.</p>
+        <div class="test-author-name" data-i18n="t1.name">Client Name 01</div>
+        <div class="test-author-role" data-i18n="t1.role">Civil Contractor · Bengaluru</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <span class="test-verified-tag">Verified</span>
+        <span class="test-quote-icon">"</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text" data-i18n="t2.text">Best place in Peenya for PVC and CPVC fittings. The team helped us identify the right specs for our housing project. Very knowledgeable and helpful.</p>
+        <div class="test-author-name" data-i18n="t2.name">Client Name 02</div>
+        <div class="test-author-role" data-i18n="t2.role">Plumbing Contractor · Bengaluru</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <span class="test-verified-tag">Verified</span>
+        <span class="test-quote-icon">"</span>
+        <div class="test-stars">★★★★☆</div>
+        <p class="test-text" data-i18n="t3.text">Proper GST invoices every time — critical for our factory procurement records. The wholesale rates are competitive and delivery to our Peenya plant is always on time.</p>
+        <div class="test-author-name" data-i18n="t3.name">Client Name 03</div>
+        <div class="test-author-role" data-i18n="t3.role">Industrial Manufacturer · Peenya</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOTABLE PROJECTS
+  ============================================================ -->
+  <section class="projects-section" id="projects">
+    <div class="reveal">
+      <div class="section-tag" data-i18n="proj.tag">Our Track Record</div>
+      <div class="section-title" data-i18n="proj.title">NOTABLE PROJECTS</div>
+    </div>
+    <div class="projects-grid stagger">
+      <div class="project-card reveal">
+        <div class="project-year">2024</div>
+        <div class="project-name" data-i18n="pr1.name">Project Name Placeholder</div>
+        <p class="project-scope" data-i18n="pr1.scope">Scope: MS pipe supply for a large commercial complex. Volume: XX MT. Location: North Bengaluru.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-year">2023</div>
+        <div class="project-name" data-i18n="pr2.name">Project Name Placeholder</div>
+        <p class="project-scope" data-i18n="pr2.scope">Scope: Complete PVC &amp; CPVC piping for a gated community. Units: XXX apartments.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-year">2023</div>
+        <div class="project-name" data-i18n="pr3.name">Project Name Placeholder</div>
+        <p class="project-scope" data-i18n="pr3.scope">Scope: Industrial pipe supply to manufacturing unit. Products: ERW MS pipes, GI fittings.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-year">2022</div>
+        <div class="project-name" data-i18n="pr4.name">Project Name Placeholder</div>
+        <p class="project-scope" data-i18n="pr4.scope">Scope: Water supply infrastructure for a township. Products: PVC pressure &amp; drainage pipes.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-year">2022</div>
+        <div class="project-name" data-i18n="pr5.name">Project Name Placeholder</div>
+        <p class="project-scope" data-i18n="pr5.scope">Scope: MEP contractor supply for a hospital project. Products: CPVC hot-water pipes, fittings.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-year">2021</div>
+        <div class="project-name" data-i18n="pr6.name">Project Name Placeholder</div>
+        <p class="project-scope" data-i18n="pr6.scope">Scope: Ongoing bulk MS pipe supply to fabrication yard. Long-term wholesale relationship.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICE AREA
+  ============================================================ -->
+  <section class="service-area-section" id="service-area">
+    <div class="sa-layout">
+      <div class="sa-intro reveal-left">
+        <div class="section-tag" data-i18n="sa.tag">Where We Deliver</div>
+        <div class="section-title" data-i18n="sa.title">SERVICE AREA</div>
+        <p data-i18n="sa.desc">We supply to contractors, builders, and manufacturers across Bengaluru and surrounding districts. Bulk orders can be arranged for outstation delivery — contact us to discuss.</p>
+      </div>
+      <div class="reveal-right">
+        <div class="sa-tags">
+          <span class="sa-tag">Peenya Industrial Area</span>
+          <span class="sa-tag">Yeshwanthpur</span>
+          <span class="sa-tag">Rajajinagar</span>
+          <span class="sa-tag">Jalahalli</span>
+          <span class="sa-tag">Tumkur Road</span>
+          <span class="sa-tag">Nelamangala</span>
+          <span class="sa-tag">Doddaballapura</span>
+          <span class="sa-tag">Hebbal</span>
+          <span class="sa-tag">Mathikere</span>
+          <span class="sa-tag">Saneguruvanahalli</span>
+          <span class="sa-tag">Dasarahalli</span>
+          <span class="sa-tag">Whitefield</span>
+          <span class="sa-tag">Electronic City</span>
+          <span class="sa-tag">HSR Layout</span>
+          <span class="sa-tag">Bannerghatta Road</span>
+          <span class="sa-tag">Yelahanka</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WAREHOUSE GALLERY
+  ============================================================ -->
+  <section class="gallery-section" id="gallery">
+    <div class="reveal">
+      <div class="section-tag" data-i18n="gal.tag">Inside Our Warehouse</div>
+      <div class="section-title" data-i18n="gal.title">WAREHOUSE &amp; FACILITY</div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-text">Warehouse Exterior</div>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Warehouse Exterior</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-text">MS Pipe Stock</div>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">MS Pipe Stock</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-text">PVC &amp; CPVC Section</div>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">PVC &amp; CPVC Section</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-text">Fittings Display</div>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Fittings Display</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-text">Loading Area</div>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Loading Area</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">📷</div>
+          <div class="gallery-placeholder-text">Office Counter</div>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Office Counter</span></div>
       </div>
     </div>
   </section>
@@ -1113,6 +1728,63 @@
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         title="Mahadurga Pipe Distributors Location">
       </iframe>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-layout">
+      <div class="faq-intro reveal-left">
+        <div class="section-tag" data-i18n="faq.tag">Got Questions?</div>
+        <div class="section-title" data-i18n="faq.title">FREQUENTLY ASKED</div>
+        <p>Everything you need to know before ordering. Can't find your answer? <a href="#location" style="color:var(--blue2);text-decoration:none;">Contact us directly.</a></p>
+      </div>
+      <div class="faq-list reveal-right" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q">
+            <span data-i18n="faq.1.q">Do you offer wholesale pricing for bulk orders?</span>
+            <span class="faq-q-icon">+</span>
+          </button>
+          <div class="faq-a" data-i18n="faq.1.a">Yes. We offer competitive wholesale pricing for bulk orders. Discounts depend on product type and order volume. Contact us or visit the warehouse for a quote.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span data-i18n="faq.2.q">What pipe brands do you stock?</span>
+            <span class="faq-q-icon">+</span>
+          </button>
+          <div class="faq-a" data-i18n="faq.2.a">We stock products from leading Indian manufacturers conforming to IS standards (IS 1239, IS 3589, IS 4985, IS 15778). Brands vary by product category — call us for specific brand availability.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span data-i18n="faq.3.q">Do you provide GST invoices?</span>
+            <span class="faq-q-icon">+</span>
+          </button>
+          <div class="faq-a" data-i18n="faq.3.a">Yes. We are GST registered (GSTIN: 29ABEFM8097N1ZA) and issue proper tax invoices for every transaction. This makes us a reliable partner for B2B procurement and project billing.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span data-i18n="faq.4.q">Can you deliver to my site?</span>
+            <span class="faq-q-icon">+</span>
+          </button>
+          <div class="faq-a" data-i18n="faq.4.a">We supply to locations across Bengaluru and surrounding districts. For large orders, outstation delivery can be arranged. Contact us to discuss your site location and requirements.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span data-i18n="faq.5.q">Do you do custom pipe cutting?</span>
+            <span class="faq-q-icon">+</span>
+          </button>
+          <div class="faq-a" data-i18n="faq.5.a">Yes. We offer custom cutting for MS pipes to your required lengths. This is available for both small and large orders. Please enquire in advance for large-volume cutting jobs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span data-i18n="faq.6.q">What are your business hours?</span>
+            <span class="faq-q-icon">+</span>
+          </button>
+          <div class="faq-a" data-i18n="faq.6.a">We are open Monday to Saturday, 10:00 AM to 7:00 PM. We are closed on Sundays. You can also reach us via WhatsApp outside business hours.</div>
+        </div>
+      </div>
     </div>
   </section>
 

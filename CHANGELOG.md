@@ -2,6 +2,31 @@
 
 ---
 
+## [2.6.0] — 2026-04-16
+
+### Added — Shell sections (placeholder content, full design + theming)
+- **Brand logos / partners strip** (`#partners`) — 8 placeholder brand boxes between Industries and Milestones; grayscale + opacity at rest, full color + blue border on hover; alternating bg from industries section
+- **Milestones timeline** (`#milestones`) — 2-column layout (intro left, vertical timeline right); 5 milestones from 2008 founding through 2026; gradient dot + connecting vertical rule; current milestone (2026) highlighted in `var(--blue2)`
+- **Proprietor bio** (`#about`) — 2-column grid: placeholder photo frame left, name / role / bio right; `prop-photo` styled with dashed blue inset border overlay; all fields wired to `data-i18n` keys
+- **Testimonials** (`#testimonials`) — 3-card grid matching product/industry card style; oversized quote glyph, star rating, italic quote text, "Verified" tag badge; hover border-color transition
+- **Notable projects** (`#projects`) — 6-card grid; year badge in `var(--blue2)`, placeholder name + scope fields; same bottom-line hover animation as product cards
+- **Service area** (`#service-area`) — 2-column layout; 16 location tags as pill chips with hover colour; `sa-intro` with tag / title / desc on left
+- **Warehouse gallery** (`#gallery`) — 6-cell 3×2 grid; each cell shows a placeholder icon + label; overlay gradient + caption slides in on hover; all 6 cells wired for future `<img>` replacement
+- **FAQ section** (`#faq`) — 2-column layout (label left, accordion list right); 6 questions with `+` / `×` icon toggle; `max-height` CSS transition for open/close; FAQ accordion JS added to `main.js`
+- **FAQPage JSON-LD schema** — second `<script type="application/ld+json">` block in `<head>` with all 6 FAQ items for Google rich results
+- **Download Catalog CTA** — `↓ Download Catalog` `btn-outline` button in Products section header, pointing to placeholder `/catalog/MDP-Catalog-2026.pdf` with `download` attribute
+- **OG image updated** — `og:image` meta changed from `MDP-Final_Logo.png` to `https://mahadurga.com/og-image.png` (1200×630 placeholder path)
+- **`sitemap.xml` updated** — 8 new `<url>` entries added for all new sections (`#partners`, `#milestones`, `#about`, `#testimonials`, `#projects`, `#service-area`, `#gallery`, `#faq`)
+- **New `data-i18n` keys** — 50+ new English keys added to `main.js` translations (`brands.*`, `ms.*`, `prop.*`, `test.*`, `t1–3.*`, `proj.*`, `pr1–6.*`, `sa.*`, `gal.*`, `faq.*`, `products.catalog`); missing keys in `hi`/`kn` fall back to English text automatically
+
+### Design notes
+- All new sections follow the existing design language: `Bebas Neue` headings, `DM Sans` body, CSS variable colours, reveal animations, 2px gradient accent lines
+- Background alternates: brands=`bg` → milestones=`bg2` → about=`bg` → testimonials=`bg2` → projects=`bg` → service-area=`bg2` → gallery=`bg` → location=`bg2` → faq=`bg2`
+- All sections are fully responsive at 1100px / 900px / 560px breakpoints
+- Changes are NOT pushed — shell content requires real data (photos, client names, project details, proprieter name/photo) before publishing
+
+---
+
 ## [2.5.0] — 2026-04-16
 
 ### Changed

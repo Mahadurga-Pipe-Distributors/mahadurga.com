@@ -13,11 +13,43 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mahadurga.com/#partners</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mahadurga.com/#milestones</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://mahadurga.com/#why</loc>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mahadurga.com/#about</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mahadurga.com/#testimonials</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mahadurga.com/#projects</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mahadurga.com/#service-area</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mahadurga.com/#gallery</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://mahadurga.com/#location</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mahadurga.com/#faq</loc>
     <priority>0.6</priority>
   </url>
 </urlset>

@@ -92,6 +92,79 @@ const translations = {
     'footer.sunday': 'Sunday: Closed',
     'footer.copy':   '© 2026 Mahadurga Pipe Distributors. All rights reserved.',
     'footer.gst':    'GST Registered · Bengaluru, Karnataka · GSTIN: 29ABEFM8097N1ZA',
+    // Products catalog CTA
+    'products.catalog': '↓ Download Catalog',
+    // Brand logos / partners strip
+    'brands.tag':   'Trusted By',
+    'brands.title': 'OUR CLIENTS &amp; PARTNERS',
+    // Milestones timeline
+    'ms.tag':   'Our Journey',
+    'ms.title': '15+ YEARS OF GROWTH',
+    'ms.intro': 'From a single product line in Peenya to a trusted wholesale partner for 500+ clients — here\'s how Mahadurga grew.',
+    'ms.1.h': 'Founded in Peenya',
+    'ms.1.p': 'Mahadurga Pipe Distributors established at Peenya Industrial Area, Bengaluru, as a wholesale pipe supplier serving local contractors.',
+    'ms.2.h': 'Expanded Product Range',
+    'ms.2.p': 'Added PVC &amp; CPVC pipe lines alongside the original MS pipe inventory to serve the growing plumbing and housing market.',
+    'ms.3.h': 'GST Registration',
+    'ms.3.p': 'Registered under GST (GSTIN: 29ABEFM8097N1ZA), enabling seamless B2B transactions with proper tax invoicing for all clients.',
+    'ms.4.h': '500+ Active Clients',
+    'ms.4.p': 'Surpassed 500 active clients across Bengaluru — contractors, builders, fabricators, and industrial manufacturers.',
+    'ms.5.h': '15+ Years &amp; Growing',
+    'ms.5.p': "Continuing to serve as Bengaluru's trusted pipe distributor, with expanded inventory and a 4.4★ Google Rating.",
+    // Proprietor bio
+    'prop.tag':  'About The Proprietor',
+    'prop.name': 'PROPRIETOR NAME',
+    'prop.role': 'Founder &amp; Proprietor · Mahadurga Pipe Distributors',
+    'prop.bio':  'With over 15 years of hands-on experience in the pipe distribution industry, [Name] founded Mahadurga Pipe Distributors with a vision to provide quality, IS-compliant materials to Bengaluru\'s growing construction and industrial sector. Starting from a single product line in Peenya, the business has grown into a trusted wholesale partner serving 500+ clients across Karnataka.',
+    // Testimonials
+    'test.tag':   'What Our Clients Say',
+    'test.title': 'CLIENT TESTIMONIALS',
+    't1.text': 'Reliable supplier for all our MS pipe requirements. Good quality, fair price, and they always have stock ready. We\'ve been ordering from Mahadurga for over 3 years now.',
+    't1.name': 'Client Name 01',
+    't1.role': 'Civil Contractor · Bengaluru',
+    't2.text': 'Best place in Peenya for PVC and CPVC fittings. The team helped us identify the right specs for our housing project. Very knowledgeable and helpful.',
+    't2.name': 'Client Name 02',
+    't2.role': 'Plumbing Contractor · Bengaluru',
+    't3.text': 'Proper GST invoices every time — critical for our factory procurement records. The wholesale rates are competitive and delivery to our Peenya plant is always on time.',
+    't3.name': 'Client Name 03',
+    't3.role': 'Industrial Manufacturer · Peenya',
+    // Notable projects
+    'proj.tag':   'Our Track Record',
+    'proj.title': 'NOTABLE PROJECTS',
+    'pr1.name': 'Project Name Placeholder',
+    'pr1.scope': 'Scope: MS pipe supply for a large commercial complex. Volume: XX MT. Location: North Bengaluru.',
+    'pr2.name': 'Project Name Placeholder',
+    'pr2.scope': 'Scope: Complete PVC &amp; CPVC piping for a gated community. Units: XXX apartments.',
+    'pr3.name': 'Project Name Placeholder',
+    'pr3.scope': 'Scope: Industrial pipe supply to manufacturing unit. Products: ERW MS pipes, GI fittings.',
+    'pr4.name': 'Project Name Placeholder',
+    'pr4.scope': 'Scope: Water supply infrastructure for a township. Products: PVC pressure &amp; drainage pipes.',
+    'pr5.name': 'Project Name Placeholder',
+    'pr5.scope': 'Scope: MEP contractor supply for a hospital project. Products: CPVC hot-water pipes, fittings.',
+    'pr6.name': 'Project Name Placeholder',
+    'pr6.scope': 'Scope: Ongoing bulk MS pipe supply to fabrication yard. Long-term wholesale relationship.',
+    // Service area
+    'sa.tag':   'Where We Deliver',
+    'sa.title': 'SERVICE AREA',
+    'sa.desc':  'We supply to contractors, builders, and manufacturers across Bengaluru and surrounding districts. Bulk orders can be arranged for outstation delivery — contact us to discuss.',
+    // Gallery
+    'gal.tag':   'Inside Our Warehouse',
+    'gal.title': 'WAREHOUSE &amp; FACILITY',
+    // FAQ
+    'faq.tag':   'Got Questions?',
+    'faq.title': 'FREQUENTLY ASKED',
+    'faq.1.q': 'Do you offer wholesale pricing for bulk orders?',
+    'faq.1.a': 'Yes. We offer competitive wholesale pricing for bulk orders. Discounts depend on product type and order volume. Contact us or visit the warehouse for a quote.',
+    'faq.2.q': 'What pipe brands do you stock?',
+    'faq.2.a': 'We stock products from leading Indian manufacturers conforming to IS standards (IS 1239, IS 3589, IS 4985, IS 15778). Brands vary by product category — call us for specific brand availability.',
+    'faq.3.q': 'Do you provide GST invoices?',
+    'faq.3.a': 'Yes. We are GST registered (GSTIN: 29ABEFM8097N1ZA) and issue proper tax invoices for every transaction. This makes us a reliable partner for B2B procurement and project billing.',
+    'faq.4.q': 'Can you deliver to my site?',
+    'faq.4.a': 'We supply to locations across Bengaluru and surrounding districts. For large orders, outstation delivery can be arranged. Contact us to discuss your site location and requirements.',
+    'faq.5.q': 'Do you do custom pipe cutting?',
+    'faq.5.a': 'Yes. We offer custom cutting for MS pipes to your required lengths at no extra charge for standard orders. Please enquire in advance for large-volume cutting jobs.',
+    'faq.6.q': 'What are your business hours?',
+    'faq.6.a': 'We are open Monday to Saturday, 10:00 AM to 7:00 PM. We are closed on Sundays. You can also reach us via WhatsApp outside business hours.',
   },
 
   hi: {
@@ -443,3 +516,18 @@ document.getElementById('langToggle').addEventListener('click', e => {
   // Ensure data-theme attr is set (default = light)
   if (!storedTheme) document.documentElement.setAttribute('data-theme', 'light');
 })();
+
+// ============================================================
+// FAQ ACCORDION
+// ============================================================
+const faqList = document.getElementById('faqList');
+if (faqList) {
+  faqList.addEventListener('click', e => {
+    const q = e.target.closest('.faq-q');
+    if (!q) return;
+    const item = q.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(fi => fi.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+}
