@@ -2,6 +2,16 @@
 
 ---
 
+## [2.5.0] — 2026-04-16
+
+### Changed
+- **Scroll indicator removed** from the hero section — deleted the `.scroll-indicator` div (animated line + "Scroll" label), all associated CSS (`.scroll-indicator`, `.scroll-line`, `.scroll-indicator span`, `@keyframes scrollPulse`), and the responsive `display: none` override
+
+### Added
+- **GST stat hover reveals GSTIN** — hovering the "GST / Registered · Active" stat block smoothly slides out "Registered · Active" upward and slides in `29ABEFM8097N1ZA` from below. Implemented with two absolutely-stacked `<span>` elements (`.gst-text` + `.gst-num-reveal`) and a CSS `overflow: hidden` clip on the label container, with `opacity` + `translateY` transitions (0.32s ease)
+
+---
+
 ## [2.4.1] — 2026-04-16
 
 ### Fixed — 404 page
