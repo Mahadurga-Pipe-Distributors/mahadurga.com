@@ -2,6 +2,14 @@
 
 ---
 
+## [2.4.1] — 2026-04-16
+
+### Fixed — 404 page
+- **Language + theme controls were non-functional** — Unicode-heavy Devanagari and Kannada strings inside an inline `<script>` block caused silent parse failures in some browsers (a ZWNJ U+200C in the Kannada desc was a likely trigger). All JavaScript extracted to `404.js` (external file, same approach as `main.js`) with all non-ASCII characters written as `\uXXXX` escape sequences to be fully ASCII-safe.
+- **Logo looked visually wrong** — `mix-blend-mode: multiply` interacts with `backdrop-filter: blur()` on the parent topbar by compositing against the blurred surface rather than the page background, producing an unexpected rendering. Removed blend mode from `.topbar-logo img`; added `border-radius: 3px` for a clean badge appearance. The `mix-blend-mode` fix applies to the main site nav where there is no backdrop-filter parent.
+
+---
+
 ## [2.4.0] — 2026-04-16
 
 ### Added
