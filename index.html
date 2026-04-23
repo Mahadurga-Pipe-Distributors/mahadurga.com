@@ -595,6 +595,43 @@
     .footer-bottom p { font-size: 0.68rem; color: var(--muted); }
 
     /* ============================================================
+       HIRING STRIP
+    ============================================================ */
+    .hiring-strip {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px;
+    }
+    .hiring-strip-text {}
+    .hiring-strip-tag {
+      font-size: 0.67rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue2); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hiring-strip-tag::before {
+      content: ''; display: block; width: 18px; height: 1px;
+      background: var(--blue2);
+    }
+    .hiring-strip h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      letter-spacing: 2px; line-height: 1.05; color: var(--text);
+    }
+    .hiring-strip p {
+      font-size: 0.87rem; color: var(--muted); margin-top: 8px; line-height: 1.6;
+    }
+    .hiring-strip-action { flex-shrink: 0; }
+    @media (max-width: 900px) {
+      .hiring-strip { flex-direction: column; align-items: flex-start; padding: 48px 30px; }
+    }
+    @media (max-width: 560px) {
+      .hiring-strip { padding: 40px 20px; }
+    }
+
+    /* ============================================================
        FLOATING BUTTONS
     ============================================================ */
     .fab-container {
@@ -735,6 +772,31 @@
     ============================================================ */
     .nav-right { display: flex; align-items: center; gap: 20px; }
 
+    .nav-jobs-link {
+      text-decoration: none;
+      font-size: 0.67rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--blue2);
+      border: 1px solid rgba(0,207,255,0.3);
+      padding: 6px 14px;
+      display: flex; align-items: center; gap: 7px;
+      transition: background 0.2s, border-color 0.2s;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .nav-jobs-link::before {
+      content: ''; display: block; width: 6px; height: 6px;
+      background: var(--blue2); border-radius: 50%;
+      animation: jobsPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes jobsPulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+    .nav-jobs-link:hover {
+      background: rgba(0,207,255,0.08);
+      border-color: rgba(0,207,255,0.6);
+    }
+    @media (max-width: 900px) { .nav-jobs-link { display: none; } }
+
     .nav-controls { display: flex; align-items: center; gap: 8px; }
 
     .lang-toggle { display: flex; align-items: stretch; border: 1px solid var(--border); }
@@ -809,6 +871,7 @@
         <li><a href="#why" data-i18n="nav.why">Why Us</a></li>
         <li><a href="#location" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <a href="jobs.html" class="nav-jobs-link" aria-label="View open positions">We're Hiring</a>
       <div class="nav-controls">
         <div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
           <button class="lang-btn" data-lang="hi">हिंदी</button>
@@ -835,6 +898,7 @@
       <li><a href="#industries" class="mob-link" data-i18n="nav.industries">Industries</a></li>
       <li><a href="#why" class="mob-link" data-i18n="nav.why">Why Us</a></li>
       <li><a href="#location" class="mob-link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="jobs.html" class="mob-link" style="color:var(--blue2);">We're Hiring</a></li>
     </ul>
   </div>
 
@@ -1115,6 +1179,20 @@
       </iframe>
     </div>
   </section>
+
+  <!-- ============================================================
+       HIRING STRIP
+  ============================================================ -->
+  <div class="hiring-strip reveal">
+    <div class="hiring-strip-text">
+      <div class="hiring-strip-tag">Now Hiring · Bengaluru</div>
+      <h3>Join Our Team</h3>
+      <p>We're growing — and looking for people who take ownership and move fast.</p>
+    </div>
+    <div class="hiring-strip-action">
+      <a href="jobs.html" class="btn-primary">View Open Roles</a>
+    </div>
+  </div>
 
   <!-- ============================================================
        FOOTER

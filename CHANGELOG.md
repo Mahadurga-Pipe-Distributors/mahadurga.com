@@ -2,6 +2,21 @@
 
 ---
 
+## [2.7.0] — 2026-04-23
+
+### Added
+- **`jobs.html`** — careers listing page with a card for each open role. Each card shows job title, chips (location, CTC, experience, schedule), a one-line description, and an arrow. Links to individual JD pages. Includes a "Don't see a fit?" footer note with open-application mailto. Nav has "Back to site" + logo.
+- **`careers-accounts-exec.html`** — standalone JD page for the Accounts Executive role (₹3L–₹5.5L, 1–3 yrs, Tally/ERP + Excel). Follows the same layout as the Sales Ops JD. Apply mailto routes to `mahadurgapipes+hr@gmail.com` with pre-filled subject and body.
+- **"We're Hiring" nav pill** — added to the desktop nav in `index.html`, after the regular nav links and before the lang toggle. Styled with a cyan border and a pulsing dot animation. Links to `jobs.html`. Hidden on ≤900px (available in mobile menu instead).
+- **Mobile menu "We're Hiring" entry** — added as the last item in the mobile menu, coloured cyan to distinguish it from standard nav links.
+- **"Join Our Team" hiring strip** — full-width strip added between the Location section and the footer in `index.html`. Shows "Now Hiring · Bengaluru" eyebrow, "Join Our Team" heading, a short tagline, and a "View Open Roles" CTA button linking to `jobs.html`. Responsive: stacks vertically below 900px.
+
+### Changed
+- **`careers-sales-ops.html`** nav — wrapped in `.nav-right` flex group; added "All Roles" link (→ `jobs.html`) beside "Back to site", matching the accounts-exec nav layout.
+- **`careers-sales-ops.html`** apply email — changed from `mahadurgapipes+web@gmail.com` to `mahadurgapipes+hr@gmail.com` for HR label filtering.
+
+---
+
 ## [2.6.0] — 2026-04-23
 
 ### Added

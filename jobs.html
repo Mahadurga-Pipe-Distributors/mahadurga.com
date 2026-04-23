@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Open positions at Mahadurga Pipe Distributors, Bengaluru. Join a fast-growing team in the pipes distribution industry."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <title>Careers | Mahadurga Pipe Distributors</title>
+  <link rel="icon" href="MDP-Final_Logo.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:     #07090f;
+      --bg2:    #0d1020;
+      --bg3:    #111525;
+      --blue:   #1a6fff;
+      --blue2:  #00cfff;
+      --text:   #e8edf8;
+      --muted:  #5a6380;
+      --border: #1c2240;
+      --nav-h:  70px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.35;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 60px;
+      background: rgba(7,9,15,0.92);
+      backdrop-filter: blur(20px) saturate(160%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+    .nav-logo img { height: 40px; width: 40px; object-fit: contain; mix-blend-mode: multiply; }
+    .nav-logo-text { display: flex; flex-direction: column; gap: 2px; }
+    .nav-logo-text .top {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: 3px;
+      background: linear-gradient(90deg, #1a6fff, #00cfff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;
+    }
+    .nav-logo-text .sub {
+      font-size: 0.54rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    }
+
+    .nav-back {
+      text-decoration: none; color: var(--muted);
+      font-size: 0.74rem; letter-spacing: 1.5px; text-transform: uppercase;
+      transition: color 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .nav-back:hover { color: var(--blue2); }
+    .nav-back svg { transition: transform 0.2s; }
+    .nav-back:hover svg { transform: translateX(-3px); }
+
+    /* PAGE */
+    main {
+      position: relative; z-index: 1;
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 100px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* HEADER */
+    .page-header { margin-bottom: 64px; }
+
+    .page-eyebrow {
+      font-size: 0.67rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue2); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .page-eyebrow::before {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: var(--blue2); flex-shrink: 0;
+    }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      letter-spacing: 2px; line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .page-subtitle {
+      font-size: 0.95rem; color: #8a96b4; line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* SECTION */
+    .roles-label {
+      font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue2); margin-bottom: 24px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .roles-label::before {
+      content: ''; display: block; width: 18px; height: 1px; background: var(--blue2);
+    }
+
+    /* JOB CARDS */
+    .jobs-list {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+
+    .job-card {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      text-decoration: none;
+      transition: border-color 0.25s, background 0.25s, transform 0.2s;
+      position: relative; overflow: hidden;
+    }
+
+    .job-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #1a6fff, #00cfff);
+      transform: scaleY(0); transform-origin: bottom;
+      transition: transform 0.25s ease;
+    }
+
+    .job-card:hover {
+      border-color: rgba(0,207,255,0.35);
+      background: var(--bg3);
+      transform: translateX(4px);
+    }
+
+    .job-card:hover::before { transform: scaleY(1); }
+
+    .job-card-body {}
+
+    .job-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.45rem; letter-spacing: 2px; color: var(--text);
+      margin-bottom: 8px; line-height: 1;
+    }
+
+    .job-card-meta {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+    }
+
+    .job-chip {
+      font-size: 0.71rem; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--muted); background: var(--bg3); border: 1px solid var(--border);
+      padding: 4px 10px;
+    }
+
+    .job-card-desc {
+      font-size: 0.88rem; color: #8a96b4; line-height: 1.6;
+      max-width: 520px;
+    }
+
+    .job-card-arrow {
+      flex-shrink: 0; width: 40px; height: 40px;
+      border: 1px solid var(--border); color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .job-card:hover .job-card-arrow {
+      border-color: var(--blue2); color: var(--blue2); transform: translateX(4px);
+    }
+
+    /* NO MORE ROLES */
+    .no-more {
+      margin-top: 40px; padding: 28px 32px;
+      border: 1px dashed var(--border);
+      display: flex; align-items: center; gap: 16px;
+    }
+    .no-more p { font-size: 0.87rem; color: var(--muted); line-height: 1.65; }
+    .no-more a { color: var(--blue2); text-decoration: none; }
+    .no-more a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    .page-footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 28px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.75rem; color: var(--muted);
+    }
+
+    /* FADE IN */
+    .fade-in {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      nav { padding: 0 24px; }
+      .container { padding: 0 20px; }
+      main { padding-top: calc(var(--nav-h) + 56px); }
+      .job-card { flex-direction: column; align-items: flex-start; padding: 22px 20px; }
+      .job-card-arrow { display: none; }
+      .page-footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="MDP-Final_Logo.png" alt="MDP Logo"/>
+      <div class="nav-logo-text">
+        <span class="top">Mahadurga</span>
+        <span class="sub">Pipe Distributors</span>
+      </div>
+    </a>
+    <a href="index.html" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to site
+    </a>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- HEADER -->
+      <div class="page-header fade-in">
+        <div class="page-eyebrow">Careers · Bengaluru</div>
+        <h1 class="page-title">Open Roles</h1>
+        <p class="page-subtitle">We're a growing team building the operational and sales backbone of one of India's leading pipe distributors. Click a role to see the full job description.</p>
+      </div>
+
+      <!-- ROLES LIST -->
+      <div class="roles-label fade-in">Current Openings</div>
+
+      <div class="jobs-list fade-in">
+
+        <!-- Sales Operations Executive -->
+        <a href="careers-sales-ops.html" class="job-card">
+          <div class="job-card-body">
+            <div class="job-card-title">Sales Operations Executive</div>
+            <div class="job-card-meta">
+              <span class="job-chip">📍 Peenya, Bengaluru</span>
+              <span class="job-chip">₹4L – ₹7L</span>
+              <span class="job-chip">3–5 yrs exp</span>
+              <span class="job-chip">Mon – Sat</span>
+            </div>
+            <p class="job-card-desc">Operational backbone of the sales team — daily tracking, beat planning, and management reporting. Work directly with senior leadership.</p>
+          </div>
+          <div class="job-card-arrow">→</div>
+        </a>
+
+        <!-- Accounts Executive -->
+        <a href="careers-accounts-exec.html" class="job-card">
+          <div class="job-card-body">
+            <div class="job-card-title">Accounts Executive</div>
+            <div class="job-card-meta">
+              <span class="job-chip">📍 Peenya, Bengaluru</span>
+              <span class="job-chip">₹3L – ₹5.5L</span>
+              <span class="job-chip">1–3 yrs exp</span>
+              <span class="job-chip">Mon – Sat</span>
+            </div>
+            <p class="job-card-desc">Tally/ERP accounting + Excel-based reporting and dashboards. Requires hands-on experience with both tools in a real work environment.</p>
+          </div>
+          <div class="job-card-arrow">→</div>
+        </a>
+
+      </div>
+
+      <!-- NO MORE ROLES NOTE -->
+      <div class="no-more fade-in">
+        <p>Don't see a role that fits? Send your profile to <a href="mailto:mahadurgapipes+hr@gmail.com?subject=Open%20Application%20-%20Mahadurga%20Pipe%20Distributors">mahadurgapipes+hr@gmail.com</a> — we'll keep it on file.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <span>© 2026 Mahadurga Pipe Distributors · Bengaluru</span>
+    <span>GST Registered · GSTIN: 29ABEFM8097N1ZA</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
