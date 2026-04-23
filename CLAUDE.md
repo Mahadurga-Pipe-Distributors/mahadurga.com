@@ -24,6 +24,41 @@ Instructions and context for Claude Code when working in this repo.
 
 ---
 
+## Infrastructure: Cloudflare
+
+`mahadurga.com` is **proxied through Cloudflare** (orange-cloud / full proxy mode). Cloudflare sits in front of GitHub Pages and handles:
+
+- **DDoS protection & WAF** — security rules applied at the edge
+- **SSL/TLS** — Cloudflare terminates HTTPS; traffic to GitHub Pages may be HTTP internally
+- **Caching** — static assets cached at Cloudflare edge nodes
+- **Browser Insights analytics** — Cloudflare injects `beacon.min.js` from `static.cloudflareinsights.com` into pages for real-user monitoring
+- **HTTP response headers** — the `Content-Security-Policy` (CSP) header is set via a **Cloudflare Transform Rule** (Rules → Transform Rules → Response Header Modification), NOT in the repo. GitHub Pages does not support custom HTTP response headers.
+
+### Current CSP (as of 2026-04-23)
+
+Set in Cloudflare Transform Rules:
+
+```
+default-src 'self';
+script-src 'self' https://static.cloudflareinsights.com;
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https:;
+connect-src 'self' https://cloudflareinsights.com;
+frame-src https://www.google.com;
+```
+
+> **IMPORTANT for future changes:** If a new third-party script, font, or iframe is added to any page, the CSP in Cloudflare must also be updated — go to Cloudflare → mahadurga.com → Rules → Transform Rules → find the CSP rule → add the new origin to the correct directive. The repo alone is not enough.
+
+### Email tag routing
+
+| Tag | Purpose |
+|---|---|
+| `+web` | Inquiries from the website contact section |
+| `+hr` | Job applications from careers pages |
+
+---
+
 ## Repo Structure
 
 ```
