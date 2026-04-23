@@ -4,6 +4,14 @@ Instructions and context for Claude Code when working in this repo.
 
 ---
 
+## MANDATORY: Design Principles
+
+**Mobile-First.** All new UI must be designed and coded for mobile screens first, then enhanced for larger breakpoints. Write base styles for the smallest viewport, then add `@media (min-width: ...)` overrides — never the reverse. Test layout, typography, spacing, and tap targets at 375px before considering desktop.
+
+**Light Theme-First.** Light mode is the default and primary experience. Dark mode is a secondary toggle for users who prefer it. All new components must look correct and complete in light mode out of the box; dark mode overrides are additive.
+
+---
+
 ## MANDATORY: Changelog Rule
 
 **Every commit must be accompanied by an update to `CHANGELOG.md`.**
