@@ -2,6 +2,19 @@
 
 ---
 
+## [2.6.0] — 2026-04-23
+
+### Added
+- **`careers-sales-ops.html`** — standalone job listing page for the "Sales Operations Executive" role. Matches main site design system (Bebas Neue + DM Sans, dark theme, blue accent palette, scroll fade-in animations). Sections: About Us, The Role, Responsibilities, Requirements, Good to Have, Apply CTA. `noindex, nofollow` meta so the page stays off search engines. Apply button opens a pre-filled `mailto:` to `mahadurgapipes+web@gmail.com` with subject and body prompt for candidates.
+
+### Fixed
+- **Street address corrected** in `index.html` — updated in two places (visible location section and JSON-LD `streetAddress`) and once in the footer:
+  - Old: `Site No. 8 & 9, #491, Phase IV, Peenya II Stage, Peenya Industrial Area`
+  - New: `Plot No. 6, 8 & 9, #491, 4th Phase, 14th Cross Road, Peenya Industrial Area`
+  - Footer short address updated from `Peenya II Stage` to `Peenya Industrial Area`
+
+---
+
 ## [2.5.0] — 2026-04-16
 
 ### Changed
