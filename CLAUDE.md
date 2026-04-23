@@ -36,17 +36,23 @@ Instructions and context for Claude Code when working in this repo.
 
 ### Current CSP (as of 2026-04-23)
 
-Set in Cloudflare Transform Rules:
+Set in Cloudflare Transform Rules (Rules → Transform Rules → Response Header Modification):
 
 ```
-default-src 'self';
-script-src 'self' https://static.cloudflareinsights.com;
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-font-src 'self' https://fonts.gstatic.com;
-img-src 'self' data: https:;
-connect-src 'self' https://cloudflareinsights.com;
-frame-src https://www.google.com;
+default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.googleapis.com https://maps.gstatic.com https://*.googleusercontent.com https://*.ggpht.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com https://maps.gstatic.com https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
 ```
+
+Why each directive exists:
+- `script-src 'unsafe-inline'` — required for Cloudflare's injected challenge/bot-detection inline scripts
+- `script-src https://static.cloudflareinsights.com` — Cloudflare Browser Insights beacon
+- `style-src 'unsafe-inline'` — site uses inline `<style>` blocks extensively
+- `font-src https://fonts.gstatic.com` — Google Fonts served from gstatic
+- `img-src https://maps.googleapis.com ...` — Google Maps tile/marker images in the embedded map
+- `frame-src https://www.google.com https://maps.google.com` — Google Maps iframe embed on the contact section
+- `connect-src https://maps.googleapis.com https://maps.gstatic.com` — Maps JS API XHR calls
+- `connect-src https://cloudflareinsights.com` — beacon POST endpoint
+- `frame-ancestors 'self'` — prevents clickjacking
+- `upgrade-insecure-requests` — forces HTTP → HTTPS on mixed content
 
 > **IMPORTANT for future changes:** If a new third-party script, font, or iframe is added to any page, the CSP in Cloudflare must also be updated — go to Cloudflare → mahadurga.com → Rules → Transform Rules → find the CSP rule → add the new origin to the correct directive. The repo alone is not enough.
 
