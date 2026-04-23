@@ -2,6 +2,13 @@
 
 ---
 
+## [2.7.1] — 2026-04-23
+
+### Fixed
+- **Inline script CSP violation on career pages** — `jobs.html`, `careers-sales-ops.html`, and `careers-accounts-exec.html` each had an inline `<script>` block for the scroll-reveal IntersectionObserver. Cloudflare's `script-src 'self'` CSP (no `'unsafe-inline'`) blocked these, causing `.fade-in` elements to never become visible and the entire page content disappearing. Extracted the shared code to `careers.js` (external file, served as same-origin); all three pages now use `<script src="careers.js"></script>`.
+
+---
+
 ## [2.7.0] — 2026-04-23
 
 ### Added
